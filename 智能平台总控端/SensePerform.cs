@@ -30,11 +30,6 @@ namespace 智能平台总控端
             BindingData();
         }
 
-        public void Display(int deviceid)
-        {
-            DeviceID = deviceid;
-            this.ShowDialog();
-        }
 
 
 
@@ -104,18 +99,18 @@ namespace 智能平台总控端
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            DevicePerformView model = dataGridView2.SelectedRows[0].DataBoundItem as DevicePerformView;
-            PerformService ss = new PerformService();
-            ss.DeletePerform(model,NowUser.CurrentUser);
-            BindingData();
+            try
+            {
+                DevicePerformView model = dataGridView2.SelectedRows[0].DataBoundItem as DevicePerformView;
+                PerformService ss = new PerformService();
+                ss.DeletePerform(model, NowUser.CurrentUser);
+                BindingData();
 
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("请正确选中行", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            }
+            catch
+            {
+                MessageBox.Show("请正确选中行", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -138,6 +133,41 @@ namespace 智能平台总控端
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DevicePerformView model = dataGridView2.SelectedRows[0].DataBoundItem as DevicePerformView;
+                label1.Visible = model.IsAdmin;
+                label5.Visible = model.IsAdmin;
+                pictureBox2.Visible = model.IsAdmin;
+                pictureBox3.Visible = model.IsAdmin;
+            }
+            catch
+            {
+            }
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DeviceSensorView model = dataGridView1.SelectedRows[0].DataBoundItem as DeviceSensorView;
+                label3.Visible = model.IsAdmin;
+                label4.Visible = model.IsAdmin;
+                DeleteBtn.Visible = model.IsAdmin;
+                EditBtn.Visible = model.IsAdmin;
+            }
+            catch
+            {
+            }
         }
     }
 }

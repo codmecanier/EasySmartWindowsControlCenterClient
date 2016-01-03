@@ -56,7 +56,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(169, 248);
+            this.textBox1.Location = new System.Drawing.Point(169, 245);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(206, 26);
             this.textBox1.TabIndex = 113;
@@ -66,7 +66,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微软雅黑", 15.75F);
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(46, 245);
+            this.label7.Location = new System.Drawing.Point(46, 242);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(117, 28);
             this.label7.TabIndex = 112;
@@ -76,7 +76,7 @@
             // 
             this.numericUpDown3.DecimalPlaces = 8;
             this.numericUpDown3.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.numericUpDown3.Location = new System.Drawing.Point(169, 213);
+            this.numericUpDown3.Location = new System.Drawing.Point(169, 210);
             this.numericUpDown3.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -92,7 +92,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 15.75F);
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(46, 210);
+            this.label6.Location = new System.Drawing.Point(46, 207);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(117, 28);
             this.label6.TabIndex = 110;
@@ -101,7 +101,7 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.numericUpDown2.Location = new System.Drawing.Point(169, 178);
+            this.numericUpDown2.Location = new System.Drawing.Point(169, 175);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -117,7 +117,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 15.75F);
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(46, 175);
+            this.label3.Location = new System.Drawing.Point(46, 172);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(96, 28);
             this.label3.TabIndex = 108;
@@ -126,7 +126,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Font = new System.Drawing.Font("宋体", 10.5F);
-            this.richTextBox1.Location = new System.Drawing.Point(169, 280);
+            this.richTextBox1.Location = new System.Drawing.Point(169, 277);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(206, 160);
             this.richTextBox1.TabIndex = 107;
@@ -135,7 +135,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.numericUpDown1.Location = new System.Drawing.Point(169, 143);
+            this.numericUpDown1.Location = new System.Drawing.Point(169, 140);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -156,7 +156,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 15.75F);
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(46, 140);
+            this.label5.Location = new System.Drawing.Point(46, 137);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(117, 28);
             this.label5.TabIndex = 105;
@@ -177,7 +177,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(295, 25);
+            this.pictureBox2.Location = new System.Drawing.Point(295, 22);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(80, 74);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -201,7 +201,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 15.75F);
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(47, 280);
+            this.label4.Location = new System.Drawing.Point(47, 277);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 28);
             this.label4.TabIndex = 101;
@@ -210,7 +210,7 @@
             // Nametext
             // 
             this.Nametext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Nametext.Location = new System.Drawing.Point(169, 108);
+            this.Nametext.Location = new System.Drawing.Point(169, 105);
             this.Nametext.Name = "Nametext";
             this.Nametext.Size = new System.Drawing.Size(206, 26);
             this.Nametext.TabIndex = 100;
@@ -220,7 +220,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 15.75F);
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(46, 105);
+            this.label2.Location = new System.Drawing.Point(46, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(117, 28);
             this.label2.TabIndex = 99;
@@ -231,7 +231,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 21.75F);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(45, 40);
+            this.label1.Location = new System.Drawing.Point(45, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(220, 38);
             this.label1.TabIndex = 98;
@@ -242,7 +242,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(438, 526);
+            this.ClientSize = new System.Drawing.Size(430, 526);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.numericUpDown3);

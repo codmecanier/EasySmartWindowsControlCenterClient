@@ -63,6 +63,8 @@
             this.floorInfoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deviceInformationViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditBtn)).BeginInit();
@@ -73,10 +75,13 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceInformationViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -89,14 +94,14 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(927, 88);
+            this.panel1.Size = new System.Drawing.Size(1036, 88);
             this.panel1.TabIndex = 0;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(754, 22);
+            this.label7.Location = new System.Drawing.Point(706, 22);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(145, 50);
             this.label7.TabIndex = 19;
@@ -107,7 +112,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(607, 22);
+            this.label6.Location = new System.Drawing.Point(559, 22);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 50);
             this.label6.TabIndex = 18;
@@ -117,7 +122,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(454, 22);
+            this.label5.Location = new System.Drawing.Point(406, 22);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 50);
             this.label5.TabIndex = 17;
@@ -127,7 +132,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(304, 22);
+            this.label4.Location = new System.Drawing.Point(256, 22);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 50);
             this.label4.TabIndex = 16;
@@ -138,7 +143,7 @@
             this.pictureBox4.ErrorImage = null;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.InitialImage")));
-            this.pictureBox4.Location = new System.Drawing.Point(673, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(625, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(80, 74);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -151,7 +156,7 @@
             this.EditBtn.ErrorImage = null;
             this.EditBtn.Image = ((System.Drawing.Image)(resources.GetObject("EditBtn.Image")));
             this.EditBtn.InitialImage = ((System.Drawing.Image)(resources.GetObject("EditBtn.InitialImage")));
-            this.EditBtn.Location = new System.Drawing.Point(521, 3);
+            this.EditBtn.Location = new System.Drawing.Point(473, 3);
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.Size = new System.Drawing.Size(80, 74);
             this.EditBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -162,7 +167,7 @@
             // DeleteBtn
             // 
             this.DeleteBtn.Image = ((System.Drawing.Image)(resources.GetObject("DeleteBtn.Image")));
-            this.DeleteBtn.Location = new System.Drawing.Point(368, 3);
+            this.DeleteBtn.Location = new System.Drawing.Point(320, 3);
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(80, 74);
             this.DeleteBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -173,7 +178,7 @@
             // Addbtn
             // 
             this.Addbtn.Image = ((System.Drawing.Image)(resources.GetObject("Addbtn.Image")));
-            this.Addbtn.Location = new System.Drawing.Point(218, 3);
+            this.Addbtn.Location = new System.Drawing.Point(170, 3);
             this.Addbtn.Name = "Addbtn";
             this.Addbtn.Size = new System.Drawing.Size(80, 74);
             this.Addbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -285,7 +290,7 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.listBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(721, 88);
+            this.panel3.Location = new System.Drawing.Point(830, 88);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(206, 501);
             this.panel3.TabIndex = 2;
@@ -336,7 +341,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(212, 88);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(509, 501);
+            this.panel4.Size = new System.Drawing.Size(618, 501);
             this.panel4.TabIndex = 3;
             // 
             // dataGridView1
@@ -357,7 +362,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(509, 501);
+            this.dataGridView1.Size = new System.Drawing.Size(618, 501);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -408,12 +413,35 @@
             // 
             this.deviceInformationViewBindingSource.DataSource = typeof(EasySmartDataBaseService.Models.DeviceInformationView);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label11.Location = new System.Drawing.Point(938, 22);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(88, 50);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "编辑设备\r\n控制面板";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(857, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(80, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Devicemanager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(927, 589);
+            this.ClientSize = new System.Drawing.Size(1036, 589);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -435,6 +463,7 @@
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceInformationViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -479,5 +508,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn floorInfoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.BindingSource deviceInformationViewBindingSource;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

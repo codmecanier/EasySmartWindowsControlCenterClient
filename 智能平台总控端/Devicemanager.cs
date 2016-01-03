@@ -167,13 +167,14 @@ namespace 智能平台总控端
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 DeviceInformationView model = dataGridView1.SelectedRows[0].DataBoundItem as DeviceInformationView;
                 SensePerform sp = new SensePerform();
-                sp.Display(model.DeviceID);
-            //}
-            //catch { }
+                sp.DeviceID = model.DeviceID;
+                sp.ShowDialog();
+            }
+            catch { }
         }
 
         private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -220,6 +221,18 @@ namespace 智能平台总控端
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DeviceInformationView model = dataGridView1.SelectedRows[0].DataBoundItem as DeviceInformationView;
+                ControlPanelEditor form = new ControlPanelEditor();
+                form.DeviceID = model.DeviceID;
+                form.Show();
+            }
+            catch { }
         }
     }
 }

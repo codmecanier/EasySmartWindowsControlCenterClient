@@ -50,19 +50,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.deviceSensorViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.devicePerformViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sensorMaximDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sensorMinimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.visibleDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.arrowReadDataDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.isAdminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,6 +62,19 @@
             this.arrowReadDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.arrowUpdateDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.isAdminDataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.devicePerformViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sensorMaximDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sensorMinimDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.visibleDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.arrowReadDataDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.isAdminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.deviceSensorViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -89,8 +89,8 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deviceSensorViewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.devicePerformViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deviceSensorViewBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -143,6 +143,8 @@
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView2.Size = new System.Drawing.Size(448, 419);
             this.dataGridView2.TabIndex = 55;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.dataGridView2.SelectionChanged += new System.EventHandler(this.dataGridView2_SelectionChanged);
             // 
             // panel4
             // 
@@ -317,6 +319,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(424, 419);
             this.dataGridView1.TabIndex = 54;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // panel3
             // 
@@ -352,91 +355,6 @@
             this.label3.Size = new System.Drawing.Size(54, 28);
             this.label3.TabIndex = 51;
             this.label3.Text = "删除";
-            // 
-            // deviceSensorViewBindingSource
-            // 
-            this.deviceSensorViewBindingSource.DataSource = typeof(EasySmartDataBaseService.Models.DeviceSensorView);
-            // 
-            // devicePerformViewBindingSource
-            // 
-            this.devicePerformViewBindingSource.DataSource = typeof(EasySmartDataBaseService.Models.DevicePerformView);
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "SenseName";
-            this.dataGridViewTextBoxColumn6.HeaderText = "名称";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "SenserAddress";
-            this.dataGridViewTextBoxColumn7.HeaderText = "物理地址";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "SensorInfo";
-            this.dataGridViewTextBoxColumn8.HeaderText = "详细信息";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "SensorBase";
-            this.dataGridViewTextBoxColumn10.HeaderText = "基准值";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "SensorCompiction";
-            this.dataGridViewTextBoxColumn11.HeaderText = "修正值";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "SensorUnit";
-            this.dataGridViewTextBoxColumn12.HeaderText = "单位";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // sensorMaximDataGridViewTextBoxColumn
-            // 
-            this.sensorMaximDataGridViewTextBoxColumn.DataPropertyName = "SensorMaxim";
-            this.sensorMaximDataGridViewTextBoxColumn.HeaderText = "最大值";
-            this.sensorMaximDataGridViewTextBoxColumn.Name = "sensorMaximDataGridViewTextBoxColumn";
-            this.sensorMaximDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sensorMinimDataGridViewTextBoxColumn
-            // 
-            this.sensorMinimDataGridViewTextBoxColumn.DataPropertyName = "SensorMinim";
-            this.sensorMinimDataGridViewTextBoxColumn.HeaderText = "最小值";
-            this.sensorMinimDataGridViewTextBoxColumn.Name = "sensorMinimDataGridViewTextBoxColumn";
-            this.sensorMinimDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // visibleDataGridViewCheckBoxColumn
-            // 
-            this.visibleDataGridViewCheckBoxColumn.DataPropertyName = "Visible";
-            this.visibleDataGridViewCheckBoxColumn.HeaderText = "可见";
-            this.visibleDataGridViewCheckBoxColumn.Name = "visibleDataGridViewCheckBoxColumn";
-            this.visibleDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // arrowReadDataDataGridViewCheckBoxColumn
-            // 
-            this.arrowReadDataDataGridViewCheckBoxColumn.DataPropertyName = "ArrowReadData";
-            this.arrowReadDataDataGridViewCheckBoxColumn.HeaderText = "允许读数据";
-            this.arrowReadDataDataGridViewCheckBoxColumn.Name = "arrowReadDataDataGridViewCheckBoxColumn";
-            this.arrowReadDataDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
-            // isAdminDataGridViewCheckBoxColumn
-            // 
-            this.isAdminDataGridViewCheckBoxColumn.DataPropertyName = "IsAdmin";
-            this.isAdminDataGridViewCheckBoxColumn.HeaderText = "管理权限";
-            this.isAdminDataGridViewCheckBoxColumn.Name = "isAdminDataGridViewCheckBoxColumn";
-            this.isAdminDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn14
             // 
@@ -522,6 +440,91 @@
             this.isAdminDataGridViewCheckBoxColumn1.Name = "isAdminDataGridViewCheckBoxColumn1";
             this.isAdminDataGridViewCheckBoxColumn1.ReadOnly = true;
             // 
+            // devicePerformViewBindingSource
+            // 
+            this.devicePerformViewBindingSource.DataSource = typeof(EasySmartDataBaseService.Models.DevicePerformView);
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "SenseName";
+            this.dataGridViewTextBoxColumn6.HeaderText = "名称";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "SenserAddress";
+            this.dataGridViewTextBoxColumn7.HeaderText = "物理地址";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "SensorInfo";
+            this.dataGridViewTextBoxColumn8.HeaderText = "详细信息";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "SensorBase";
+            this.dataGridViewTextBoxColumn10.HeaderText = "基准值";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "SensorCompiction";
+            this.dataGridViewTextBoxColumn11.HeaderText = "修正值";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "SensorUnit";
+            this.dataGridViewTextBoxColumn12.HeaderText = "单位";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // sensorMaximDataGridViewTextBoxColumn
+            // 
+            this.sensorMaximDataGridViewTextBoxColumn.DataPropertyName = "SensorMaxim";
+            this.sensorMaximDataGridViewTextBoxColumn.HeaderText = "最大值";
+            this.sensorMaximDataGridViewTextBoxColumn.Name = "sensorMaximDataGridViewTextBoxColumn";
+            this.sensorMaximDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sensorMinimDataGridViewTextBoxColumn
+            // 
+            this.sensorMinimDataGridViewTextBoxColumn.DataPropertyName = "SensorMinim";
+            this.sensorMinimDataGridViewTextBoxColumn.HeaderText = "最小值";
+            this.sensorMinimDataGridViewTextBoxColumn.Name = "sensorMinimDataGridViewTextBoxColumn";
+            this.sensorMinimDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // visibleDataGridViewCheckBoxColumn
+            // 
+            this.visibleDataGridViewCheckBoxColumn.DataPropertyName = "Visible";
+            this.visibleDataGridViewCheckBoxColumn.HeaderText = "可见";
+            this.visibleDataGridViewCheckBoxColumn.Name = "visibleDataGridViewCheckBoxColumn";
+            this.visibleDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // arrowReadDataDataGridViewCheckBoxColumn
+            // 
+            this.arrowReadDataDataGridViewCheckBoxColumn.DataPropertyName = "ArrowReadData";
+            this.arrowReadDataDataGridViewCheckBoxColumn.HeaderText = "允许读数据";
+            this.arrowReadDataDataGridViewCheckBoxColumn.Name = "arrowReadDataDataGridViewCheckBoxColumn";
+            this.arrowReadDataDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // isAdminDataGridViewCheckBoxColumn
+            // 
+            this.isAdminDataGridViewCheckBoxColumn.DataPropertyName = "IsAdmin";
+            this.isAdminDataGridViewCheckBoxColumn.HeaderText = "管理权限";
+            this.isAdminDataGridViewCheckBoxColumn.Name = "isAdminDataGridViewCheckBoxColumn";
+            this.isAdminDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // deviceSensorViewBindingSource
+            // 
+            this.deviceSensorViewBindingSource.DataSource = typeof(EasySmartDataBaseService.Models.DeviceSensorView);
+            // 
             // SensePerform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -549,8 +552,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.deviceSensorViewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.devicePerformViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deviceSensorViewBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -572,7 +575,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel3;
@@ -629,5 +631,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn arrowReadDataDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn isAdminDataGridViewCheckBoxColumn;
         private System.Windows.Forms.BindingSource deviceSensorViewBindingSource;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

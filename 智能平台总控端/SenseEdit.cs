@@ -60,6 +60,7 @@ namespace 智能平台总控端
                 model.SensorCompiction = (decimal)numericUpDown3.Value;
                 model.SensorInfo = richTextBox1.Text.Trim();
                 model.SensorUnit = textBox1.Text.Trim();
+                model.DeviceID = DeviceID;
                 ss.AddSensor(model, NowUser.CurrentUser);
             }
             else
@@ -73,6 +74,7 @@ namespace 智能平台总控端
                 model.SensorCompiction = numericUpDown3.Value;
                 model.SensorInfo = richTextBox1.Text.Trim();
                 model.SensorUnit = textBox1.Text.Trim();
+                model.DeviceID = DeviceID;
                 ss.Update(model, NowUser.CurrentUser);
             }
             this.Close();
