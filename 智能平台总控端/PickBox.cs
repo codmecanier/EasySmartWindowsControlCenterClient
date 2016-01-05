@@ -18,6 +18,13 @@ namespace 智能平台总控端
         private Color BOX_COLOR = Color.White;
         private ContainerControl m_container;
         private Control m_control;
+        public Control Control
+        {
+            get
+            {
+                return m_control;
+            }
+        }
         private Label[] lbl = new Label[8];
         private int startl;
         private int startt;
@@ -26,6 +33,22 @@ namespace 智能平台总控端
         private int startx;
         private int starty;
         private bool dragging;
+        private bool selected;
+        private bool mousedown;
+        public bool Selected
+        {
+            get
+            {
+                return selected;
+            }
+        }
+        public bool Dragging
+        {
+            get
+            {
+                return dragging;
+            }
+        }
         private Cursor[] arrArrow = new Cursor[] {Cursors.SizeNWSE, Cursors.SizeNS,
 			Cursors.SizeNESW, Cursors.SizeWE, Cursors.SizeNWSE, Cursors.SizeNS,
 			Cursors.SizeNESW, Cursors.SizeWE};
@@ -55,7 +78,7 @@ namespace 智能平台总控端
         public void WireControl(Control ctl)
         {
             ctl.Click += new EventHandler(this.SelectControl);
-
+            m_control = ctl;
         }
 
 
@@ -66,7 +89,7 @@ namespace 智能平台总控端
         //
         // Attaches a pick box to the sender Control
         //
-        private void SelectControl(object sender, EventArgs e)
+        public void SelectControl(object sender, EventArgs e)
         {
 
             if (m_control is Control)
@@ -83,9 +106,9 @@ namespace 智能平台总控端
 
             m_control = (Control)sender;
             //Add event handlers for moving the selected control around
-            m_control.MouseDown += new MouseEventHandler(this.ctl_MouseDown);
-            m_control.MouseMove += new MouseEventHandler(this.ctl_MouseMove);
-            m_control.MouseUp += new MouseEventHandler(this.ctl_MouseUp);
+            //m_control.MouseDown += new MouseEventHandler(this.ctl_MouseDown);
+            //m_control.MouseMove += new MouseEventHandler(this.ctl_MouseMove);
+            //m_control.MouseUp += new MouseEventHandler(this.ctl_MouseUp);
 
             //Add sizing handles to Control's container (Form or PictureBox)
             for (int i = 0; i < 8; i++)
@@ -102,6 +125,7 @@ namespace 智能平台总控端
 
             oldCursor = m_control.Cursor;
             m_control.Cursor = Cursors.SizeAll;
+            selected = true;
 
         }
 
@@ -109,6 +133,7 @@ namespace 智能平台总控端
         {
             HideHandles();
             m_control.Cursor = oldCursor;
+            selected = false;
         }
 
         private void ShowHandles()
@@ -210,17 +235,22 @@ namespace 智能平台总控端
             ShowHandles();
         }
 
-        private void ctl_MouseDown(object sender, MouseEventArgs e)
+        public void ctl_MouseDown(object sender, MouseEventArgs e)
         {
-            dragging = true;
-            startx = e.X;
-            starty = e.Y;
-            HideHandles();
+            mousedown = true;
+
         }
-        private void ctl_MouseMove(object sender, MouseEventArgs e)
+        public void ctl_MouseMove(object sender, MouseEventArgs e)
         {
-            if (dragging)
+            if (mousedown)
             {
+                if (!dragging)
+                {
+                    dragging = true;
+                    startx = e.X;
+                    starty = e.Y;
+                    HideHandles();
+                }
                 int l = m_control.Left + e.X - startx;
                 int t = m_control.Top + e.Y - starty;
                 int w = m_control.Width;
@@ -233,8 +263,9 @@ namespace 智能平台总控端
                 m_control.Top = t;
             }
         }
-        private void ctl_MouseUp(object sender, MouseEventArgs e)
+        public void ctl_MouseUp(object sender, MouseEventArgs e)
         {
+            mousedown = false;
             dragging = false;
             MoveHandles();
             ShowHandles();

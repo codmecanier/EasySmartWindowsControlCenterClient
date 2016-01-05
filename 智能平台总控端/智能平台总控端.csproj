@@ -60,6 +60,9 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge.Controls">
+      <HintPath>C:\Program Files (x86)\ESMT\AForge.Controls.dll</HintPath>
+    </Reference>
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
@@ -107,6 +110,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -168,6 +172,8 @@
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="NowUser.cs" />
+    <Compile Include="ObjectBytes.cs" />
+    <Compile Include="ObjectXML.cs" />
     <Compile Include="PerformEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +200,7 @@
     <Compile Include="SensePerform.Designer.cs">
       <DependentUpon>SensePerform.cs</DependentUpon>
     </Compile>
+    <Compile Include="SerialList.cs" />
     <Compile Include="UserControls\ArcMeter.cs">
       <SubType>UserControl</SubType>
     </Compile>
