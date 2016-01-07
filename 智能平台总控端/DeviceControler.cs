@@ -27,31 +27,31 @@ namespace 智能平台总控端
             DisplayPerforms();
             pictureBox2.Visible = false;
         }
-        //private GroupBox NewSensorController(DeviceSensorView model)
-        //{
-        //    GroupBox gb = new GroupBox();
-        //    Label lb = new Label();
-        //    TextBox tb = new TextBox();
-        //    ProgressBar pb = new ProgressBar();
-        //    gb.Controls.Add(lb);
-        //    gb.Controls.Add(pb);
-        //    gb.Controls.Add(tb);
-        //    gb.Name = model.SenseID.ToString();
-        //    gb.Size = new System.Drawing.Size(474, 93);
-        //    gb.Text = model.SenseName;
-        //    lb.Location = new System.Drawing.Point(13, 40);
-        //    lb.Size = new System.Drawing.Size(69, 25);
-        //    lb.Text = "状态：";
-        //    pb.Location = new System.Drawing.Point(88, 32);
-        //    pb.Size = new System.Drawing.Size(198, 41);
-        //    pb.Maximum = (int)model.SensorMaxim;
-        //    pb.Minimum = (int)model.SensorMinim;
-        //    pb.Value = (int)model.SensorOutPut;
-        //    tb.Location = new System.Drawing.Point(292, 37);
-        //    tb.Size = new System.Drawing.Size(176, 33);
-        //    tb.Text = model.SensorOutPut.ToString();
-        //    tb.Text += model.SensorUnit;
-        //    return gb;
+        private GroupBox NewSensorController(DeviceSensorView model)
+        {
+            GroupBox gb = new GroupBox();
+            Label lb = new Label();
+            TextBox tb = new TextBox();
+            ProgressBar pb = new ProgressBar();
+            gb.Controls.Add(lb);
+            gb.Controls.Add(pb);
+            gb.Controls.Add(tb);
+            gb.Name = model.SenseID.ToString();
+            gb.Size = new System.Drawing.Size(474, 93);
+            gb.Text = model.SenseName;
+            lb.Location = new System.Drawing.Point(13, 40);
+            lb.Size = new System.Drawing.Size(69, 25);
+            lb.Text = "状态：";
+            pb.Location = new System.Drawing.Point(88, 32);
+            pb.Size = new System.Drawing.Size(198, 41);
+            pb.Maximum = (int)model.SensorMaxim;
+            pb.Minimum = (int)model.SensorMinim;
+            pb.Value = (int)model.SensorOutPut;
+            tb.Location = new System.Drawing.Point(292, 37);
+            tb.Size = new System.Drawing.Size(176, 33);
+            tb.Text = model.SensorOutPut.ToString();
+            tb.Text += model.SensorUnit;
+            return gb;
         }
         private GroupBox NewPerformController(DevicePerformView model)
         {
@@ -88,8 +88,8 @@ namespace 智能平台总控端
         }
         private void DisplaySensors()
         {
-            DeviceSensorViewService model = new DeviceSensorViewService();
-            IEnumerable<DeviceSensorView> list = model.GetByCondition(P => P.DeviceID == DeviceID);
+            SensorService model = new SensorService();
+            IEnumerable<DeviceSensorView> list = model.GetByCondiction(P => P.DeviceID == DeviceID,NowUser.CurrentUser);
             flowLayoutPanel1.Controls.Clear();
             foreach (DeviceSensorView models in list)
             {

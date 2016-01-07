@@ -140,10 +140,17 @@ namespace 智能平台总控端
             pb.Name = name;
             pan.Controls.Add(pb);
             pan.Controls.Add(lb);
-           // pb.MouseClick += ClickPicEvent;
+            pb.MouseClick += ClickDeviceEvent;
             pb.MouseEnter += EnterPicEvent;
             pb.MouseLeave += LeavePicEvent;
             return pan;
+        }
+
+        private void ClickDeviceEvent(object sender, MouseEventArgs e)
+        {
+            DeviceControler dcs = new DeviceControler();
+            dcs.DeviceID = int.Parse((sender as PictureBox).Name);
+            dcs.ShowDialog();
         }
         private void EnterPicEvent(object sender, EventArgs e)
         { ((PictureBox)sender).BackColor = Color.LightBlue; }

@@ -181,9 +181,11 @@ namespace 智能平台总控端
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            
             if (richTextBox1.Text.Length == 0)
             {
                 MessageBox.Show("未编译的文档不能保存", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             if (path.Length == 0)
             {
@@ -210,7 +212,67 @@ namespace 智能平台总控端
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            switch (MessageBox.Show("要保存文件吗？\n要保存文件请点击是\n要放弃文件请点击否，您所做的更改全部丢失\n要返回设计器请点击取消"))
+            {
+                case DialogResult.Cancel:
+                    {
+                        return;
+                    }
+                case DialogResult.No:
+                    {
+                        break;
+                    }
+                case DialogResult.Yes:
+                    {
+                        if (richTextBox1.Text.Length == 0)
+                        {
+                            MessageBox.Show("未编译的文档不能保存", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            if (path.Length == 0)
+                            {
+                                SaveFileDialog sfd = new SaveFileDialog();
+                                sfd.Filter = "XML文档|*.xml";
+                                sfd.FilterIndex = 0;
+                                if (sfd.ShowDialog() == DialogResult.OK)
+                                {
+                                    path = sfd.FileName;
+                                    StreamWriter sw = new StreamWriter(path);
+                                    sw.WriteLine(richTextBox1.Text);
+                                    sw.Flush();
+                                    sw.Close();
+                                }
+                            }
+                            else
+                            {
+                                StreamWriter sw = new StreamWriter(path);
+                                sw.WriteLine(richTextBox1.Text);
+                                sw.Flush();
+                                sw.Close();
+                            }
+                        }
+                        break;
+                    }
+            }
+            OpenFileDialog ofd = new OpenFileDialog(); ;
+            ofd.Filter = "XML文档|*.xml";
+            ofd.FilterIndex = 0;
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                StreamReader sr = new StreamReader(ofd.FileName);
+                string str = sr.ReadToEnd();
+                sr.Close();
+                //try
+                //{
+                //    panel4.Controls.Clear();
+                    ObjectXML.ReadXML(panel4,str);
+                //}
+                //catch
+                //{
+                //    MessageBox.Show("XML文件损坏", "文件损坏", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
+            }
         }
 
         private void ControlPanelEditor_FormClosing(object sender, FormClosingEventArgs e)
