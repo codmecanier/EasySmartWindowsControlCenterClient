@@ -119,14 +119,14 @@ namespace 智能平台总控端
 
         private void pictureButton5_Load(object sender, EventArgs e)
         {
-            Power p = new Power();
+            Power_Frm p = new Power_Frm();
             p.ShowDialog();
         }
 
         private void pictureButton3_Load(object sender, EventArgs e)
         {
-            Devicemanager dv = new Devicemanager();
-            dv.ShowDialog();
+            //Devicemanager dv = new Devicemanager();
+            //dv.ShowDialog();
         }
 
     }

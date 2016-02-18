@@ -12,5 +12,7 @@ namespace 智能平台总控端.DTO
         public string RoomName { get; set; }
         public string RoomInfo { get; set; }
         public int RoomID { get; set; }
+        public int FloorID { get; set; }
+        public List<DeviceDTO> dDTOList { get; set; }
     }
 }
