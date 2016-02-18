@@ -113,6 +113,8 @@
   <ItemGroup>
     <Compile Include="DTO\DeviceDTO.cs" />
     <Compile Include="DTO\FloorDTO.cs" />
+    <Compile Include="DTO\PerformOrSensorDTO.cs" />
+    <Compile Include="DTO\PowerDTO.cs" />
     <Compile Include="DTO\RoomDTO.cs" />
     <Compile Include="FileObject.cs" />
     <Compile Include="FloorEdit.cs">
@@ -203,7 +205,10 @@
     <Compile Include="Models\ModeToTimer.cs" />
     <Compile Include="Models\Perform.cs" />
     <Compile Include="Models\PerformToControl.cs" />
+    <Compile Include="Models\Power.cs" />
     <Compile Include="Models\RemoteButton.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\RoleToPower.cs" />
     <Compile Include="Models\Room.cs" />
     <Compile Include="Models\RoomDeviceView.cs" />
     <Compile Include="Models\RoomToDevice.cs" />
@@ -218,15 +223,16 @@
     <Compile Include="Models\UserSensorPower.cs" />
     <Compile Include="Models\UserToFloor.cs" />
     <Compile Include="Models\UserToMode.cs" />
+    <Compile Include="Models\UserToRole.cs" />
     <Compile Include="Models\UserToTimer.cs" />
     <Compile Include="NowUser.cs" />
     <Compile Include="PersonalSettings.cs" />
     <Compile Include="PickBox.cs" />
-    <Compile Include="Power.cs">
+    <Compile Include="Power_Frm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Power.Designer.cs">
-      <DependentUpon>Power.cs</DependentUpon>
+    <Compile Include="Power_Frm.Designer.cs">
+      <DependentUpon>Power_Frm.cs</DependentUpon>
     </Compile>
     <Compile Include="RoomEdit.cs">
       <SubType>Form</SubType>
@@ -290,8 +296,8 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Power.resx">
-      <DependentUpon>Power.cs</DependentUpon>
+    <EmbeddedResource Include="Power_Frm.resx">
+      <DependentUpon>Power_Frm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RoomEdit.resx">
       <DependentUpon>RoomEdit.cs</DependentUpon>

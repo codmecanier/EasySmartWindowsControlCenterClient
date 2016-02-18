@@ -103,13 +103,8 @@ namespace 智能平台总控端
 
         private void pictureButton8_Click(object sender, EventArgs e)
         {
-            EasySmartDataBaseContext context = new EasySmartDataBaseContext();
-            var dbSet = context.Floors;
-            var query = dbSet.Where("FloorName=\"1楼\"").Select("FloorInfo");
-            foreach(dynamic d in query)
-            {
-                MessageBox.Show(d);
-            }
+            Power_Frm p = new Power_Frm();
+            p.ShowDialog();
         }
 
         private void pictureButton6_Click(object sender, EventArgs e)
@@ -119,8 +114,6 @@ namespace 智能平台总控端
 
         private void pictureButton5_Load(object sender, EventArgs e)
         {
-            Power p = new Power();
-            p.ShowDialog();
         }
 
         private void pictureButton3_Load(object sender, EventArgs e)

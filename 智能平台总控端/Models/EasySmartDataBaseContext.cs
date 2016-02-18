@@ -43,6 +43,10 @@ namespace 智能平台总控端.Models
         public DbSet<User> Users { get; set; }
         public DbSet<UserPerformPower> UserPerformPowers { get; set; }
         public DbSet<UserSensorPower> UserSensorPowers { get; set; }
+        public DbSet<UserToRole> UserToRoles { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Power> Powers { get; set; }
+        public DbSet<RoleToPower> RoleToPower { get; set; }
         public DbSet<UserToFloor> UserToFloors { get; set; }
         public DbSet<UserToMode> UserToModes { get; set; }
         public DbSet<UserToTimer> UserToTimers { get; set; }
