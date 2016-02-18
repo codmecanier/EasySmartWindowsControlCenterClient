@@ -111,12 +111,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Devicemanager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Devicemanager.Designer.cs">
-      <DependentUpon>Devicemanager.cs</DependentUpon>
-    </Compile>
     <Compile Include="DTO\DeviceDTO.cs" />
     <Compile Include="DTO\FloorDTO.cs" />
     <Compile Include="DTO\RoomDTO.cs" />
@@ -240,11 +234,11 @@
     <Compile Include="RoomEdit.Designer.cs">
       <DependentUpon>RoomEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="SensePerform.cs">
+    <Compile Include="SenseEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SensePerform.Designer.cs">
-      <DependentUpon>SensePerform.cs</DependentUpon>
+    <Compile Include="SenseEdit.Designer.cs">
+      <DependentUpon>SenseEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="ServiceManager.cs" />
     <Compile Include="Service\AlarmService.cs" />
@@ -283,9 +277,6 @@
     <Compile Include="UserControls\PictureButton.Designer.cs">
       <DependentUpon>PictureButton.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Devicemanager.resx">
-      <DependentUpon>Devicemanager.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FloorEdit.resx">
       <DependentUpon>FloorEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -304,9 +295,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RoomEdit.resx">
       <DependentUpon>RoomEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SensePerform.resx">
-      <DependentUpon>SensePerform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ArcMeter.resx">
       <DependentUpon>ArcMeter.cs</DependentUpon>
@@ -547,12 +535,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\13853.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BaseRepository\BaseRepository.csproj">
-      <Project>{225ebb0b-106a-41ea-929c-fab5b731e173}</Project>
-      <Name>BaseRepository</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
