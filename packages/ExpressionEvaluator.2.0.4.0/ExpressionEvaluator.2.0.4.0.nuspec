@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ExpressionEvaluator</id>
+    <version>2.0.4.0</version>
+    <title>ExpressionEvaluator</title>
+    <authors>David Khristepher Santos</authors>
+    <owners>David Khristepher Santos</owners>
+    <projectUrl>http://rupertavery.github.io/csharpeval/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Eval for C#</description>
+    <summary>Runtime parsing and compilation of C# expressions</summary>
+    <releaseNotes>Improved dynamic expression detection and indexers for Dictionary objects and Custom indexer properties.</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <tags>Expressions eval C# parser compiler dynamic</tags>
+    <dependencies>
+      <dependency id="Antlr" version="3.5.0.2" />
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A280741-F987-45F6-88FC-C1616C891753}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>智能平台总控端</RootNamespace>
+    <AssemblyName>智能平台总控端</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>I:\EasySmart智能平台\智能平台总控端\Image\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2F0DEF38E031A065BEBBF145FAEF238C6ADBED9B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>智能平台总控端_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.Extended">
+      <HintPath>..\packages\EntityFramework.Extended.6.1.0.168\lib\net45\EntityFramework.Extended.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExpressionEvaluator">
+      <HintPath>..\packages\ExpressionEvaluator.2.0.4.0\lib\net40\ExpressionEvaluator.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections">
+      <HintPath>..\packages\Iesi.Collections.4.0.1.4000\lib\net40\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Devicemanager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Devicemanager.Designer.cs">
+      <DependentUpon>Devicemanager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DTO\DeviceDTO.cs" />
+    <Compile Include="DTO\FloorDTO.cs" />
+    <Compile Include="DTO\RoomDTO.cs" />
+    <Compile Include="FileObject.cs" />
+    <Compile Include="FloorEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FloorEdit.Designer.cs">
+      <DependentUpon>FloorEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FloorRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FloorRoom.Designer.cs">
+      <DependentUpon>FloorRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalService.cs" />
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Alarm.cs" />
+    <Compile Include="Models\AlarmToSensor.cs" />
+    <Compile Include="Models\AlarmToUser.cs" />
+    <Compile Include="Models\AlarmView.cs" />
+    <Compile Include="Models\Control.cs" />
+    <Compile Include="Models\Device.cs" />
+    <Compile Include="Models\DeviceInformationView.cs" />
+    <Compile Include="Models\DevicePerformView.cs" />
+    <Compile Include="Models\DeviceRoomView.cs" />
+    <Compile Include="Models\DeviceSensorView.cs" />
+    <Compile Include="Models\DeviceToPerform.cs" />
+    <Compile Include="Models\DeviceToRemoteButton.cs" />
+    <Compile Include="Models\DeviceToSensor.cs" />
+    <Compile Include="Models\DeviceToUser.cs" />
+    <Compile Include="Models\EasySmartDataBaseContext.cs" />
+    <Compile Include="Models\Floor.cs" />
+    <Compile Include="Models\FloorToRoom.cs" />
+    <Compile Include="Models\FloorView.cs" />
+    <Compile Include="Models\Mapping\AlarmMap.cs" />
+    <Compile Include="Models\Mapping\AlarmToSensorMap.cs" />
+    <Compile Include="Models\Mapping\AlarmToUserMap.cs" />
+    <Compile Include="Models\Mapping\AlarmViewMap.cs" />
+    <Compile Include="Models\Mapping\ControlMap.cs" />
+    <Compile Include="Models\Mapping\DeviceInformationViewMap.cs" />
+    <Compile Include="Models\Mapping\DeviceMap.cs" />
+    <Compile Include="Models\Mapping\DevicePerformViewMap.cs" />
+    <Compile Include="Models\Mapping\DeviceRoomViewMap.cs" />
+    <Compile Include="Models\Mapping\DeviceSensorViewMap.cs" />
+    <Compile Include="Models\Mapping\DeviceToPerformMap.cs" />
+    <Compile Include="Models\Mapping\DeviceToRemoteButtonMap.cs" />
+    <Compile Include="Models\Mapping\DeviceToSensorMap.cs" />
+    <Compile Include="Models\Mapping\DeviceToUserMap.cs" />
+    <Compile Include="Models\Mapping\FloorMap.cs" />
+    <Compile Include="Models\Mapping\FloorToRoomMap.cs" />
+    <Compile Include="Models\Mapping\FloorViewMap.cs" />
+    <Compile Include="Models\Mapping\ModeInfoViewMap.cs" />
+    <Compile Include="Models\Mapping\ModeMap.cs" />
+    <Compile Include="Models\Mapping\ModeToPerformMap.cs" />
+    <Compile Include="Models\Mapping\ModeToTimerMap.cs" />
+    <Compile Include="Models\Mapping\PerformMap.cs" />
+    <Compile Include="Models\Mapping\PerformToControlMap.cs" />
+    <Compile Include="Models\Mapping\RemoteButtonMap.cs" />
+    <Compile Include="Models\Mapping\RoomDeviceViewMap.cs" />
+    <Compile Include="Models\Mapping\RoomMap.cs" />
+    <Compile Include="Models\Mapping\RoomToDeviceMap.cs" />
+    <Compile Include="Models\Mapping\RoomToRemoteMap.cs" />
+    <Compile Include="Models\Mapping\RoomToUserMap.cs" />
+    <Compile Include="Models\Mapping\RoomViewMap.cs" />
+    <Compile Include="Models\Mapping\SensorMap.cs" />
+    <Compile Include="Models\Mapping\SensorToControlMap.cs" />
+    <Compile Include="Models\Mapping\TimerMap.cs" />
+    <Compile Include="Models\Mapping\UserMap.cs" />
+    <Compile Include="Models\Mapping\UserPerformPowerMap.cs" />
+    <Compile Include="Models\Mapping\UserSensorPowerMap.cs" />
+    <Compile Include="Models\Mapping\UserToFloorMap.cs" />
+    <Compile Include="Models\Mapping\UserToModeMap.cs" />
+    <Compile Include="Models\Mapping\UserToTimerMap.cs" />
+    <Compile Include="Models\Mode.cs" />
+    <Compile Include="Models\ModeInfoView.cs" />
+    <Compile Include="Models\ModeToPerform.cs" />
+    <Compile Include="Models\ModeToTimer.cs" />
+    <Compile Include="Models\Perform.cs" />
+    <Compile Include="Models\PerformToControl.cs" />
+    <Compile Include="Models\RemoteButton.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\RoomDeviceView.cs" />
+    <Compile Include="Models\RoomToDevice.cs" />
+    <Compile Include="Models\RoomToRemote.cs" />
+    <Compile Include="Models\RoomToUser.cs" />
+    <Compile Include="Models\RoomView.cs" />
+    <Compile Include="Models\Sensor.cs" />
+    <Compile Include="Models\SensorToControl.cs" />
+    <Compile Include="Models\Timer.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserPerformPower.cs" />
+    <Compile Include="Models\UserSensorPower.cs" />
+    <Compile Include="Models\UserToFloor.cs" />
+    <Compile Include="Models\UserToMode.cs" />
+    <Compile Include="Models\UserToTimer.cs" />
+    <Compile Include="NowUser.cs" />
+    <Compile Include="PersonalSettings.cs" />
+    <Compile Include="PickBox.cs" />
+    <Compile Include="Power.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Power.Designer.cs">
+      <DependentUpon>Power.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomEdit.Designer.cs">
+      <DependentUpon>RoomEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensePerform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SensePerform.Designer.cs">
+      <DependentUpon>SensePerform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceManager.cs" />
+    <Compile Include="Service\AlarmService.cs" />
+    <Compile Include="Service\FloorService.cs" />
+    <Compile Include="Service\PerformService.cs" />
+    <Compile Include="Service\RoomService.cs" />
+    <Compile Include="Service\SensorService.cs" />
+    <Compile Include="Service\BaseService.cs" />
+    <Compile Include="Service\Services.cs" />
+    <Compile Include="Service\UserService.cs" />
+    <Compile Include="UserControls\ArcMeter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ArcMeter.Designer.cs">
+      <DependentUpon>ArcMeter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseLayer\SqlDao.cs" />
+    <Compile Include="UserControls\ControlButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ControlButton.Designer.cs">
+      <DependentUpon>ControlButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DataNumberDisplayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DataNumberDisplayer.Designer.cs">
+      <DependentUpon>DataNumberDisplayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\DeviceService.cs" />
+    <Compile Include="UserControls\PictureButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\PictureButton.Designer.cs">
+      <DependentUpon>PictureButton.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Devicemanager.resx">
+      <DependentUpon>Devicemanager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FloorEdit.resx">
+      <DependentUpon>FloorEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FloorRoom.resx">
+      <DependentUpon>FloorRoom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Power.resx">
+      <DependentUpon>Power.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomEdit.resx">
+      <DependentUpon>RoomEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SensePerform.resx">
+      <DependentUpon>SensePerform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ArcMeter.resx">
+      <DependentUpon>ArcMeter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ControlButton.resx">
+      <DependentUpon>ControlButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DataNumberDisplayer.resx">
+      <DependentUpon>DataNumberDisplayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControls\PictureButton.resx">
+      <DependentUpon>PictureButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\智能平台总控端.Models.FloorView.datasource" />
+    <None Include="Properties\DataSources\智能平台总控端.Models.RoomView.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1420.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4700.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30431.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\41200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\505441.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\505469.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\515436.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\540476.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\548297.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\548306.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\558982.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\567511.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1062156.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1086644.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1088379.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1095979.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1095992.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1095996.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1096004.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1096012.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1096018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1112527.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1133629.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1133630.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1173969.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1173991.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1174119.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1180516.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1183337.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1184029.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1185219.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1188524.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1192339.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10883791.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1189210.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\523620.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1179979.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1161081.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1189265.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13147.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1147518.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1189846.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1181949.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1161131.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1189266.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1187964.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1182357.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1083422.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26313.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1148543.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\524160.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1173785.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1189267.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1169315.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1117178.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11840291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1152986.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1189268.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1182358.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1182355.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13853.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseRepository\BaseRepository.csproj">
+      <Project>{225ebb0b-106a-41ea-929c-fab5b731e173}</Project>
+      <Name>BaseRepository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
