@@ -42,8 +42,23 @@
             this.FloorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FloorInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Room_Data = new System.Windows.Forms.DataGridView();
+            this.Room_Check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.RFloorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Room_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RoomInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Device_Data = new System.Windows.Forms.DataGridView();
+            this.Device_Check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.DRoomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Device_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeviceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeviceInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Perform_Or_Sensor_Data = new System.Windows.Forms.DataGridView();
+            this.PSCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.PSDeviceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PSName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PSInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PSID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -53,21 +68,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.Room_Check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.RFloorID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Room_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Device_Check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.DRoomID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Device_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeviceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeviceInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PSCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.PSDeviceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PSName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PSInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PSID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -237,6 +237,42 @@
             this.Room_Data.TabIndex = 0;
             this.Room_Data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Room_Data_CellClick);
             // 
+            // Room_Check
+            // 
+            this.Room_Check.DataPropertyName = "Room_Check";
+            this.Room_Check.HeaderText = "选定";
+            this.Room_Check.Name = "Room_Check";
+            this.Room_Check.ReadOnly = true;
+            // 
+            // RFloorID
+            // 
+            this.RFloorID.DataPropertyName = "FloorID";
+            this.RFloorID.HeaderText = "FloorID";
+            this.RFloorID.Name = "RFloorID";
+            this.RFloorID.Visible = false;
+            // 
+            // Room_ID
+            // 
+            this.Room_ID.DataPropertyName = "RoomID";
+            this.Room_ID.HeaderText = "RoomID";
+            this.Room_ID.Name = "Room_ID";
+            this.Room_ID.ReadOnly = true;
+            this.Room_ID.Visible = false;
+            // 
+            // RoomName
+            // 
+            this.RoomName.DataPropertyName = "RoomName";
+            this.RoomName.HeaderText = "房间名称";
+            this.RoomName.Name = "RoomName";
+            this.RoomName.ReadOnly = true;
+            // 
+            // RoomInfo
+            // 
+            this.RoomInfo.DataPropertyName = "RoomInfo";
+            this.RoomInfo.HeaderText = "房间简介";
+            this.RoomInfo.Name = "RoomInfo";
+            this.RoomInfo.ReadOnly = true;
+            // 
             // Device_Data
             // 
             this.Device_Data.AllowUserToAddRows = false;
@@ -257,6 +293,42 @@
             this.Device_Data.TabIndex = 0;
             this.Device_Data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Device_Data_CellClick);
             // 
+            // Device_Check
+            // 
+            this.Device_Check.DataPropertyName = "Device_Check";
+            this.Device_Check.HeaderText = "选定";
+            this.Device_Check.Name = "Device_Check";
+            this.Device_Check.ReadOnly = true;
+            // 
+            // DRoomID
+            // 
+            this.DRoomID.DataPropertyName = "RoomID";
+            this.DRoomID.HeaderText = "RoomID";
+            this.DRoomID.Name = "DRoomID";
+            this.DRoomID.Visible = false;
+            // 
+            // Device_ID
+            // 
+            this.Device_ID.DataPropertyName = "DeviceID";
+            this.Device_ID.HeaderText = "DeviceID";
+            this.Device_ID.Name = "Device_ID";
+            this.Device_ID.ReadOnly = true;
+            this.Device_ID.Visible = false;
+            // 
+            // DeviceName
+            // 
+            this.DeviceName.DataPropertyName = "DeviceName";
+            this.DeviceName.HeaderText = "设备名称";
+            this.DeviceName.Name = "DeviceName";
+            this.DeviceName.ReadOnly = true;
+            // 
+            // DeviceInfo
+            // 
+            this.DeviceInfo.DataPropertyName = "DeviceInfo";
+            this.DeviceInfo.HeaderText = "设备简介";
+            this.DeviceInfo.Name = "DeviceInfo";
+            this.DeviceInfo.ReadOnly = true;
+            // 
             // Perform_Or_Sensor_Data
             // 
             this.Perform_Or_Sensor_Data.AllowUserToAddRows = false;
@@ -275,7 +347,40 @@
             this.Perform_Or_Sensor_Data.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Perform_Or_Sensor_Data.Size = new System.Drawing.Size(373, 136);
             this.Perform_Or_Sensor_Data.TabIndex = 0;
-            this.Perform_Or_Sensor_Data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Perform_Or_Sensor_Data_CellClick);
+            // 
+            // PSCheck
+            // 
+            this.PSCheck.DataPropertyName = "PSCheck";
+            this.PSCheck.HeaderText = "选定";
+            this.PSCheck.Name = "PSCheck";
+            // 
+            // PSDeviceID
+            // 
+            this.PSDeviceID.DataPropertyName = "DeviceID";
+            this.PSDeviceID.HeaderText = "DeviceID";
+            this.PSDeviceID.Name = "PSDeviceID";
+            this.PSDeviceID.Visible = false;
+            // 
+            // PSName
+            // 
+            this.PSName.DataPropertyName = "PSName";
+            this.PSName.HeaderText = "执行器/传感器名称";
+            this.PSName.Name = "PSName";
+            this.PSName.Width = 150;
+            // 
+            // PSInfo
+            // 
+            this.PSInfo.DataPropertyName = "PSInfo";
+            this.PSInfo.HeaderText = "执行器/传感器简介";
+            this.PSInfo.Name = "PSInfo";
+            this.PSInfo.Width = 150;
+            // 
+            // PSID
+            // 
+            this.PSID.DataPropertyName = "PSID";
+            this.PSID.HeaderText = "ID";
+            this.PSID.Name = "PSID";
+            this.PSID.Visible = false;
             // 
             // tableLayoutPanel1
             // 
@@ -378,112 +483,6 @@
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "房间";
-            // 
-            // Room_Check
-            // 
-            this.Room_Check.DataPropertyName = "Room_Check";
-            this.Room_Check.HeaderText = "选定";
-            this.Room_Check.Name = "Room_Check";
-            this.Room_Check.ReadOnly = true;
-            // 
-            // RFloorID
-            // 
-            this.RFloorID.DataPropertyName = "FloorID";
-            this.RFloorID.HeaderText = "FloorID";
-            this.RFloorID.Name = "RFloorID";
-            this.RFloorID.Visible = false;
-            // 
-            // Room_ID
-            // 
-            this.Room_ID.DataPropertyName = "RoomID";
-            this.Room_ID.HeaderText = "RoomID";
-            this.Room_ID.Name = "Room_ID";
-            this.Room_ID.ReadOnly = true;
-            this.Room_ID.Visible = false;
-            // 
-            // RoomName
-            // 
-            this.RoomName.DataPropertyName = "RoomName";
-            this.RoomName.HeaderText = "房间名称";
-            this.RoomName.Name = "RoomName";
-            this.RoomName.ReadOnly = true;
-            // 
-            // RoomInfo
-            // 
-            this.RoomInfo.DataPropertyName = "RoomInfo";
-            this.RoomInfo.HeaderText = "房间简介";
-            this.RoomInfo.Name = "RoomInfo";
-            this.RoomInfo.ReadOnly = true;
-            // 
-            // Device_Check
-            // 
-            this.Device_Check.DataPropertyName = "Device_Check";
-            this.Device_Check.HeaderText = "选定";
-            this.Device_Check.Name = "Device_Check";
-            this.Device_Check.ReadOnly = true;
-            // 
-            // DRoomID
-            // 
-            this.DRoomID.DataPropertyName = "RoomID";
-            this.DRoomID.HeaderText = "RoomID";
-            this.DRoomID.Name = "DRoomID";
-            this.DRoomID.Visible = false;
-            // 
-            // Device_ID
-            // 
-            this.Device_ID.DataPropertyName = "DeviceID";
-            this.Device_ID.HeaderText = "DeviceID";
-            this.Device_ID.Name = "Device_ID";
-            this.Device_ID.ReadOnly = true;
-            this.Device_ID.Visible = false;
-            // 
-            // DeviceName
-            // 
-            this.DeviceName.DataPropertyName = "DeviceName";
-            this.DeviceName.HeaderText = "设备名称";
-            this.DeviceName.Name = "DeviceName";
-            this.DeviceName.ReadOnly = true;
-            // 
-            // DeviceInfo
-            // 
-            this.DeviceInfo.DataPropertyName = "DeviceInfo";
-            this.DeviceInfo.HeaderText = "设备简介";
-            this.DeviceInfo.Name = "DeviceInfo";
-            this.DeviceInfo.ReadOnly = true;
-            // 
-            // PSCheck
-            // 
-            this.PSCheck.DataPropertyName = "PSCheck";
-            this.PSCheck.HeaderText = "选定";
-            this.PSCheck.Name = "PSCheck";
-            // 
-            // PSDeviceID
-            // 
-            this.PSDeviceID.DataPropertyName = "DeviceID";
-            this.PSDeviceID.HeaderText = "DeviceID";
-            this.PSDeviceID.Name = "PSDeviceID";
-            this.PSDeviceID.Visible = false;
-            // 
-            // PSName
-            // 
-            this.PSName.DataPropertyName = "PSName";
-            this.PSName.HeaderText = "执行器/传感器名称";
-            this.PSName.Name = "PSName";
-            this.PSName.Width = 150;
-            // 
-            // PSInfo
-            // 
-            this.PSInfo.DataPropertyName = "PSInfo";
-            this.PSInfo.HeaderText = "执行器/传感器简介";
-            this.PSInfo.Name = "PSInfo";
-            this.PSInfo.Width = 150;
-            // 
-            // PSID
-            // 
-            this.PSID.DataPropertyName = "PSID";
-            this.PSID.HeaderText = "ID";
-            this.PSID.Name = "PSID";
-            this.PSID.Visible = false;
             // 
             // Power_Frm
             // 

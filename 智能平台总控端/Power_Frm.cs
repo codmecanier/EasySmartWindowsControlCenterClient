@@ -25,8 +25,8 @@ namespace 智能平台总控端
         {
             InitializeComponent();
             managePower = new ManagePower();
-            SqlDao<User> uRepository = new SqlDao<User>(); 
-            dataManager = new DataManager(uRepository.GetByFirstOrDefault(p=>p.UserID==NowUser.UserID));
+            SqlDao<User> uRepository = new SqlDao<User>();
+            dataManager = new DataManager(uRepository.GetByFirstOrDefault(p => p.UserID == NowUser.UserID));
         }
 
         private void Btn_Cancel_Click(object sender, EventArgs e)
@@ -41,26 +41,22 @@ namespace 智能平台总控端
         private void Power_Load(object sender, EventArgs e)
         {
             this.Floor_Data.DataSource = dataManager._fDTOList;
+            this.Floor_Data.CellValueChanged+=Floor_Data_CellValueChanged;
         }
 
         private void Floor_Data_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var fEntity = Floor_Data.SelectedRows[0].DataBoundItem as FloorDTO;
+            this.Room_Data.CellValueChanged -= Room_Data_CellValueChanged;
             this.Room_Data.DataSource = dataManager._rDTOList.Where(p => p.FloorID == fEntity.FloorID).ToList();
-            if (fEntity.Floor_Check)
-                managePower.AddPower(fEntity);
-            else
-                managePower.RemovePower(fEntity);
+            this.Room_Data.CellValueChanged += Room_Data_CellValueChanged;
         }
 
         private void Room_Data_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var rEntity = Room_Data.SelectedRows[0].DataBoundItem as RoomDTO;
+            this.Device_Data.CellValueChanged -= Device_Data_CellValueChanged;
             this.Device_Data.DataSource = dataManager._dDTOList.Where(p => p.RoomID == rEntity.RoomID).ToList();
-            if (rEntity.Room_Check)
-                managePower.AddPower(rEntity);
-            else
-                managePower.RemovePower(rEntity);
         }
 
         private void Device_Data_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -82,21 +78,41 @@ namespace 智能平台总控端
                 this.Perform_Or_Sensor_Data.DataSource = psEntities;
                 count = psEntities.Count;
             }
+        }
+
+
+        private void Floor_Data_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            var fEntity = this.Floor_Data.SelectedRows[0].DataBoundItem as FloorDTO;
+            if (fEntity.Floor_Check)
+                managePower.AddPower(fEntity);
+            else
+                managePower.RemovePower(fEntity);
+        }
+        private void Room_Data_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            var rEntity = this.Room_Data.SelectedRows[0].DataBoundItem as RoomDTO;
+            if (rEntity.Room_Check)
+                managePower.AddPower(rEntity);
+            else
+                managePower.RemovePower(rEntity);
+        }
+        private void Device_Data_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            var dEntity = this.Device_Data.SelectedRows[0].DataBoundItem as DeviceDTO;
             if (dEntity.Device_Check)
                 managePower.AddPower(dEntity);
             else
                 managePower.RemovePower(dEntity);
         }
-
-        private void Perform_Or_Sensor_Data_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Perform_Or_Sensor_Data_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            var psEntity = Perform_Or_Sensor_Data.SelectedRows[0].DataBoundItem as PerformOrSensorDTO;
+            var psEntity = this.Perform_Or_Sensor_Data.SelectedRows[0].DataBoundItem as PerformOrSensorDTO;
             if (psEntity.PS_Check)
                 managePower.AddPower(psEntity);
             else
                 managePower.RemovePower(psEntity);
         }
-
     }
     class DataManager
     {
