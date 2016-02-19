@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EasySmartDataBaseService.Models;
+using EasySmartDataBaseService.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,8 +11,6 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using 智能平台总控端.Models;
-using 智能平台总控端.Service;
 
 namespace 智能平台总控端
 {
@@ -28,7 +28,7 @@ namespace 智能平台总控端
         {
             new Thread(() => {
                 SqlDao<Role> rRepository = new SqlDao<Role>();
-                var roleEntities = rRepository.GetAll().ToList();
+                var roleEntities = rRepository.GetAll(NowUser.CurrentUser).ToList();
                 this.BeginInvoke(new Action(()=>{
                     this.Role_Data.DataSource = roleEntities;
                 }));
