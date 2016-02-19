@@ -129,6 +129,24 @@
     <Compile Include="FloorRoom.Designer.cs">
       <DependentUpon>FloorRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Role.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Role.Designer.cs">
+      <DependentUpon>Frm_Role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Role_AddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Role_AddEdit.Designer.cs">
+      <DependentUpon>Frm_Role_AddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_UserRole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_UserRole.Designer.cs">
+      <DependentUpon>Frm_UserRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="GlobalService.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -289,6 +307,12 @@
     <EmbeddedResource Include="FloorRoom.resx">
       <DependentUpon>FloorRoom.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Role.resx">
+      <DependentUpon>Frm_Role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Role_AddEdit.resx">
+      <DependentUpon>Frm_Role_AddEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
