@@ -78,7 +78,7 @@ namespace 智能平台总控端
                     SqlDao<RoleToPower> rtpRepository = new SqlDao<RoleToPower>();
                     SqlDao<Power> pRepository = new SqlDao<Power>();
                     List<Power> power = (from rtp in rtpRepository.GetByCondition(p => p.RoleID == role.RoleID)
-                                         join p in pRepository.GetAll() on rtp.PowerID equals p.PowerID
+                                         join p in pRepository.GetAll(NowUser.CurrentUser) on rtp.PowerID equals p.PowerID
                                          select p).ToList();
                     foreach (var ex in power)
                     {

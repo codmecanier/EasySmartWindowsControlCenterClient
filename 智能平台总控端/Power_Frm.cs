@@ -26,8 +26,9 @@ namespace 智能平台总控端
         {
             InitializeComponent();
             managePower = new ManagePower();
-            SqlDao<User> uRepository = new SqlDao<User>(); 
-            dataManager = new DataManager(uRepository.GetByFirstOrDefault(p=>p.UserID==NowUser.CurrentUser.UserID));
+            SqlDao<User> uRepository = new SqlDao<User>();
+            User user = uRepository.GetByFirstOrDefault(p => p.UserID == NowUser.CurrentUser.UserID);
+            dataManager = new DataManager(user);
         }
 
         private void Btn_Cancel_Click(object sender, EventArgs e)
