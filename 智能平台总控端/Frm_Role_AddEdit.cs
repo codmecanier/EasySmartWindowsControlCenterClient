@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EasySmartDataBaseService.Models;
+using EasySmartDataBaseService.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using 智能平台总控端.Models;
-using 智能平台总控端.Service;
 
 namespace 智能平台总控端
 {

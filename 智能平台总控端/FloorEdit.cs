@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using 智能平台总控端.Service;
-using 智能平台总控端.Models;
+using EasySmartDataBaseService;
+using EasySmartDataBaseService.Service;
+using EasySmartDataBaseService.Models;
 
 namespace 智能平台总控端
 {
@@ -39,17 +40,17 @@ namespace 智能平台总控端
                 fr.FloorName = Nametext.Text;
                 fr.FloorInfo = Infotext.Text;
                 FloorService fs = new FloorService();
-                fs.Add(fr);
+                fs.Add(fr,NowUser.CurrentUser);
             }
             else
             {
                 FloorService fs = new FloorService();
-                FloorView fr = fs.GetFirstOrDefault(P => P.FloorID == floorID);
+                FloorView fr = fs.GetFirstOrDefault(P => P.FloorID == floorID,NowUser.CurrentUser);
                 if (fr != null)
                 {
                     fr.FloorName = Nametext.Text;
                     fr.FloorInfo = Infotext.Text;
-                    fs.Update(fr);
+                    fs.Update(fr, NowUser.CurrentUser);
                 }
             }
             this.Close();
@@ -64,7 +65,7 @@ namespace 智能平台总控端
             FloorService fs = new FloorService();
             if (IsEdit)
             {
-                FloorView fr = fs.GetFirstOrDefault(P => P.FloorID == floorID);
+                FloorView fr = fs.GetFirstOrDefault(P => P.FloorID == floorID, NowUser.CurrentUser);
                 if (fr != null)
                 {
                     Nametext.Text = fr.FloorName;

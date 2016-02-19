@@ -14,7 +14,6 @@ namespace 智能平台总控端
         [STAThread]
         static void Main()
         {
-            ServiceManager.ServiceRegiter();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Home());
