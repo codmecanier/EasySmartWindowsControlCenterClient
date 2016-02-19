@@ -419,7 +419,6 @@
             // 
             // floorViewBindingSource
             // 
-            this.floorViewBindingSource.DataSource = typeof(智能平台总控端.Models.FloorView);
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -472,7 +471,6 @@
             // 
             // roomViewBindingSource
             // 
-            this.roomViewBindingSource.DataSource = typeof(智能平台总控端.Models.RoomView);
             // 
             // FloorRoom
             // 

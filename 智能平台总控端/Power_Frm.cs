@@ -11,9 +11,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using 智能平台总控端.DTO;
 using EntityFramework.Extensions;
-using 智能平台总控端.Models;
-using 智能平台总控端.Service;
+using EasySmartDataBaseService;
 using System.Web.Script.Serialization;
+using EasySmartDataBaseService.Service;
+using EasySmartDataBaseService.Models;
 
 namespace 智能平台总控端
 {
@@ -26,7 +27,7 @@ namespace 智能平台总控端
             InitializeComponent();
             managePower = new ManagePower();
             SqlDao<User> uRepository = new SqlDao<User>(); 
-            dataManager = new DataManager(uRepository.GetByFirstOrDefault(p=>p.UserID==NowUser.UserID));
+            dataManager = new DataManager(uRepository.GetByFirstOrDefault(p=>p.UserID==NowUser.CurrentUser.UserID));
         }
 
         private void Btn_Cancel_Click(object sender, EventArgs e)
@@ -124,11 +125,11 @@ namespace 智能平台总控端
             #endregion
             #region 加载数据
             List<Power> powerList = (from utr in utrRepository.GetByCondition(p => p.UserID == user.UserID)
-                                     join r in roleRepository.GetAll()
+                                     join r in roleRepository.GetAll(NowUser.CurrentUser)
                                          on utr.RoleID equals r.RoleID
-                                     join rtp in rtpRepositoy.GetAll()
+                                     join rtp in rtpRepositoy.GetAll(NowUser.CurrentUser)
                                          on r.RoleID equals rtp.RoleID
-                                     join p in powerRepository.GetAll()
+                                     join p in powerRepository.GetAll(NowUser.CurrentUser)
                                          on rtp.PowerID equals p.PowerID
                                      select p).ToList();
             List<PowerDTO> powerDTOList = powerList.Select(p => {
@@ -136,7 +137,7 @@ namespace 智能平台总控端
                 return js.Deserialize<PowerDTO>(p.PowerValue);
             }).ToList();
             _fDTOList = (from utf in utfRepository.GetByCondition(p => p.UserID == user.UserID)
-                         join f in fRepository.GetAll()
+                         join f in fRepository.GetAll(NowUser.CurrentUser)
                          on utf.FloorID equals f.FloorID
                          join p in powerDTOList
                          on f.FloorID equals p.FloorID into fp
@@ -149,9 +150,9 @@ namespace 智能平台总控端
                              FloorName=f.FloorName
                          }).ToList();
             _rDTOList = (from f in _fDTOList
-                         join ftr in ftrRepository.GetAll()
+                         join ftr in ftrRepository.GetAll(NowUser.CurrentUser)
                          on f.FloorID equals ftr.FloorID
-                         join r in rRepository.GetAll()
+                         join r in rRepository.GetAll(NowUser.CurrentUser)
                          on ftr.RoomID equals r.RoomID
                          join p in powerDTOList
                          on r.RoomID equals p.RoomID into rp
@@ -164,9 +165,9 @@ namespace 智能平台总控端
                             RoomName=r.RoomName
                          }).ToList();
             _dDTOList = (from r in _rDTOList
-                         join rtd in rtdRepository.GetAll()
+                         join rtd in rtdRepository.GetAll(NowUser.CurrentUser)
                          on r.RoomID equals rtd.RoomID
-                         join d in dRepository.GetAll()
+                         join d in dRepository.GetAll(NowUser.CurrentUser)
                          on rtd.DeviceID equals d.DeviceID
                          join p in powerDTOList
                          on d.DeviceID equals p.DeviceID into dp
@@ -179,9 +180,9 @@ namespace 智能平台总控端
                             DeviceName=d.DeviceName
                          }).ToList();
             var _performList = (from d in _dDTOList
-                                join dtp in dtpRepository.GetAll()
+                                join dtp in dtpRepository.GetAll(NowUser.CurrentUser)
                                 on d.DeviceID equals dtp.DeviceID
-                                join p in pRepository.GetAll()
+                                join p in pRepository.GetAll(NowUser.CurrentUser)
                                 on dtp.PerformID equals p.PerformID
                                 join power in powerDTOList.Where(p => p._Type == 0)
                                 on p.PerformID equals power.Type_Of_Id into pp
@@ -195,9 +196,9 @@ namespace 智能平台总控端
                                     PSName=p.PerformName
                                 }).ToList();
             var _sensorList=(from d in _dDTOList
-                             join dts in dtsRepository.GetAll()
+                             join dts in dtsRepository.GetAll(NowUser.CurrentUser)
                              on d.DeviceID equals dts.DeviceID
-                             join s in sRepository.GetAll()
+                             join s in sRepository.GetAll(NowUser.CurrentUser)
                              on dts.SensorID equals s.SenseID
                              join power in powerDTOList.Where(p=>p._Type==1)
                              on s.SenseID equals power.Type_Of_Id into sp

@@ -12,15 +12,15 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
-using 智能平台总控端.Models;
-using 智能平台总控端.Service;
+using EasySmartDataBaseService;
 using System.Linq.Dynamic;
+using EasySmartDataBaseService.Service;
 
 namespace 智能平台总控端
 {
     public partial class Home : Form
     {
-        public static Services services = new Services();
+        public static NowUser services = new NowUser();
         public static FileObject file = new FileObject();
         public static PersonalSettings ps;
         FloorService fService = new FloorService();
@@ -30,12 +30,11 @@ namespace 智能平台总控端
             InitializeComponent();
             login lg = new login();
             lg.ShowDialog();
-            label2.Text = NowUser.UserName;
+            label2.Text = NowUser.CurrentUser.UserName;
         }
 
         private void Home_Load(object sender, EventArgs e)
         {
-            DeviceService dService=services.GetService("DeviceService") as DeviceService;
         }
 
         private void pictureButton4_Load(object sender, EventArgs e)

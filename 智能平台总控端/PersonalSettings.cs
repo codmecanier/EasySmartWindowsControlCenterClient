@@ -4,7 +4,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using 智能平台总控端.Models;
+using EasySmartDataBaseService;
+using EasySmartDataBaseService.Models;
 
 namespace 智能平台总控端
 {
