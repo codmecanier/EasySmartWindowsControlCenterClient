@@ -74,12 +74,10 @@ namespace 智能平台总控端.Service
         public void Delete(T entity)
         {
             db.Remove(entity);
-            this.SaveChanges();
         }
         public void Delete(Expression<Func<T,bool>> where)
         {
             db.Where(where).Delete();
-            this.SaveChanges();
         }
         /// <summary>
         /// 获取所有数据

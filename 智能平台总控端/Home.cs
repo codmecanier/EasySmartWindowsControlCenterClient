@@ -122,5 +122,11 @@ namespace 智能平台总控端
             //dv.ShowDialog();
         }
 
+        private void pictureButton9_Click(object sender, EventArgs e)
+        {
+            Frm_Role role = new Frm_Role();
+            role.ShowDialog();
+        }
+
     }
 }

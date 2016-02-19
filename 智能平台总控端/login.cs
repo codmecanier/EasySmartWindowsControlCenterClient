@@ -57,6 +57,10 @@ namespace 智能平台总控端
 
         private void login_Load(object sender, EventArgs e)
         {
+            #if DEBUG
+            //this.comboBox1.Text = "admin";
+            //this.textBox2.Text = "admin";
+            #endif
             setting = Home.file.GetObj("UserPersonalSettings.bin") as List<PersonalSettings>;
             comboBox1.DisplayMember = "UserName";
             comboBox1.DataSource = setting;
