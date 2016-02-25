@@ -7,9 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using EasySmartDataBaseService;
-using EasySmartDataBaseService.Service;
-using EasySmartDataBaseService.Models;
+using 智能平台总控端.Models;
+using 智能平台总控端.Service;
 
 namespace 智能平台总控端
 {
@@ -44,15 +43,15 @@ namespace 智能平台总控端
                 room.RoomName = Nametext.Text;
                 room.FloorID = (int)Floorcmb.SelectedValue;
                 RoomService rService = Home.services.roomservice;
-                rService.Add(room, NowUser.CurrentUser);
+                rService.Add(room);
             }
             else
             {
                 RoomService rService = Home.services.roomservice;
-                RoomView room = rService.GetFirstOrDefault(p => p.RoomID == EditID, NowUser.CurrentUser);
+                RoomView room = rService.GetFirstOrDefault(p => p.RoomID == EditID);
                 room.RoomName = Nametext.Text;
                 room.FloorID = (int)Floorcmb.SelectedValue;
-                rService.Update(room, NowUser.CurrentUser);
+                rService.Update(room);
             }
             this.Close();
         }
@@ -67,11 +66,11 @@ namespace 智能平台总控端
             FloorService fs = Home.services.floorservice;
             Floorcmb.ValueMember = "FloorID";
             Floorcmb.DisplayMember = "FloorName";
-            Floorcmb.DataSource = fs.GetAll(NowUser.CurrentUser).ToList();
-            if (IsEdit)
+            Floorcmb.DataSource = fs.GetAll().ToList();
+            if(IsEdit)
             {
                 RoomService rs = Home.services.roomservice;
-                RoomView rw = rs.GetFirstOrDefault(P => P.RoomID == EditID,NowUser.CurrentUser);
+                RoomView rw = rs.GetFirstOrDefault(P => P.RoomID == EditID);
                 rw.ID = 0;
                 Nametext.Text = rw.RoomName;
                 Floorcmb.SelectedValue = rw.FloorID;

@@ -387,7 +387,6 @@
             this.pictureButton9.PressingImage = null;
             this.pictureButton9.Size = new System.Drawing.Size(95, 152);
             this.pictureButton9.TabIndex = 9;
-            this.pictureButton9.Click += new System.EventHandler(this.pictureButton9_Click);
             this.pictureButton9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
             this.pictureButton9.MouseEnter += new System.EventHandler(this.pictureButton2_MouseEnter);
             this.pictureButton9.MouseLeave += new System.EventHandler(this.pictureButton2_MouseLeave);

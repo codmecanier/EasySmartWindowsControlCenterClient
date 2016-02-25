@@ -12,15 +12,15 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
-using EasySmartDataBaseService;
+using 智能平台总控端.Models;
+using 智能平台总控端.Service;
 using System.Linq.Dynamic;
-using EasySmartDataBaseService.Service;
 
 namespace 智能平台总控端
 {
     public partial class Home : Form
     {
-        public static NowUser services = new NowUser();
+        public static Services services = new Services();
         public static FileObject file = new FileObject();
         public static PersonalSettings ps;
         FloorService fService = new FloorService();
@@ -30,11 +30,12 @@ namespace 智能平台总控端
             InitializeComponent();
             login lg = new login();
             lg.ShowDialog();
-            label2.Text = NowUser.CurrentUser.UserName;
+            label2.Text = NowUser.UserName;
         }
 
         private void Home_Load(object sender, EventArgs e)
         {
+            DeviceService dService=services.GetService("DeviceService") as DeviceService;
         }
 
         private void pictureButton4_Load(object sender, EventArgs e)
@@ -102,8 +103,13 @@ namespace 智能平台总控端
 
         private void pictureButton8_Click(object sender, EventArgs e)
         {
-            Power_Frm p = new Power_Frm();
-            p.ShowDialog();
+            EasySmartDataBaseContext context = new EasySmartDataBaseContext();
+            var dbSet = context.Floors;
+            var query = dbSet.Where("FloorName=\"1楼\"").Select("FloorInfo");
+            foreach(dynamic d in query)
+            {
+                MessageBox.Show(d);
+            }
         }
 
         private void pictureButton6_Click(object sender, EventArgs e)
@@ -113,18 +119,14 @@ namespace 智能平台总控端
 
         private void pictureButton5_Load(object sender, EventArgs e)
         {
+            Power p = new Power();
+            p.ShowDialog();
         }
 
         private void pictureButton3_Load(object sender, EventArgs e)
         {
-            //Devicemanager dv = new Devicemanager();
-            //dv.ShowDialog();
-        }
-
-        private void pictureButton9_Click(object sender, EventArgs e)
-        {
-            Frm_Role role = new Frm_Role();
-            role.ShowDialog();
+            Devicemanager dv = new Devicemanager();
+            dv.ShowDialog();
         }
 
     }

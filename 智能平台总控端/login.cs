@@ -25,8 +25,7 @@ namespace 智能平台总控端
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Home.services.LoadAllServices();
-            NowUser.CurrentUser = Home.services.userservice.Login(comboBox1.Text, textBox2.Text);
-            if (NowUser.CurrentUser != null)
+            if (Home.services.userservice.Login(comboBox1.Text, textBox2.Text))
             {
                 PersonalSettings ps = setting.Where<PersonalSettings>(P => P.Username == comboBox1.Text.Trim()).FirstOrDefault<PersonalSettings>();
                 if (ps != null)
@@ -46,6 +45,7 @@ namespace 智能平台总控端
                     pss.Password = textBox2.Text;
                     setting.Add(pss);
                 }
+
                 Home.file.Storge(setting, "UserPersonalSettings.bin");
                 this.Close();
             }
@@ -57,10 +57,6 @@ namespace 智能平台总控端
 
         private void login_Load(object sender, EventArgs e)
         {
-            #if DEBUG
-            //this.comboBox1.Text = "admin";
-            //this.textBox2.Text = "admin";
-            #endif
             setting = Home.file.GetObj("UserPersonalSettings.bin") as List<PersonalSettings>;
             comboBox1.DisplayMember = "UserName";
             comboBox1.DataSource = setting;

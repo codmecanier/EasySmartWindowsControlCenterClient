@@ -63,9 +63,6 @@
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="EasySmartDataBaseService">
-      <HintPath>..\packages\EasySmartDataBaseService\EasySmartDataBaseService.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -114,10 +111,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Devicemanager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Devicemanager.Designer.cs">
+      <DependentUpon>Devicemanager.cs</DependentUpon>
+    </Compile>
     <Compile Include="DTO\DeviceDTO.cs" />
     <Compile Include="DTO\FloorDTO.cs" />
-    <Compile Include="DTO\PerformOrSensorDTO.cs" />
-    <Compile Include="DTO\PowerDTO.cs" />
     <Compile Include="DTO\RoomDTO.cs" />
     <Compile Include="FileObject.cs" />
     <Compile Include="FloorEdit.cs">
@@ -132,24 +133,7 @@
     <Compile Include="FloorRoom.Designer.cs">
       <DependentUpon>FloorRoom.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Role.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Role.Designer.cs">
-      <DependentUpon>Frm_Role.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Role_AddEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Role_AddEdit.Designer.cs">
-      <DependentUpon>Frm_Role_AddEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_UserRole.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_UserRole.Designer.cs">
-      <DependentUpon>Frm_UserRole.cs</DependentUpon>
-    </Compile>
+    <Compile Include="GlobalService.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,14 +146,93 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Alarm.cs" />
+    <Compile Include="Models\AlarmToSensor.cs" />
+    <Compile Include="Models\AlarmToUser.cs" />
+    <Compile Include="Models\AlarmView.cs" />
+    <Compile Include="Models\Control.cs" />
+    <Compile Include="Models\Device.cs" />
+    <Compile Include="Models\DeviceInformationView.cs" />
+    <Compile Include="Models\DevicePerformView.cs" />
+    <Compile Include="Models\DeviceRoomView.cs" />
+    <Compile Include="Models\DeviceSensorView.cs" />
+    <Compile Include="Models\DeviceToPerform.cs" />
+    <Compile Include="Models\DeviceToRemoteButton.cs" />
+    <Compile Include="Models\DeviceToSensor.cs" />
+    <Compile Include="Models\DeviceToUser.cs" />
+    <Compile Include="Models\EasySmartDataBaseContext.cs" />
+    <Compile Include="Models\Floor.cs" />
+    <Compile Include="Models\FloorToRoom.cs" />
+    <Compile Include="Models\FloorView.cs" />
+    <Compile Include="Models\Mapping\AlarmMap.cs" />
+    <Compile Include="Models\Mapping\AlarmToSensorMap.cs" />
+    <Compile Include="Models\Mapping\AlarmToUserMap.cs" />
+    <Compile Include="Models\Mapping\AlarmViewMap.cs" />
+    <Compile Include="Models\Mapping\ControlMap.cs" />
+    <Compile Include="Models\Mapping\DeviceInformationViewMap.cs" />
+    <Compile Include="Models\Mapping\DeviceMap.cs" />
+    <Compile Include="Models\Mapping\DevicePerformViewMap.cs" />
+    <Compile Include="Models\Mapping\DeviceRoomViewMap.cs" />
+    <Compile Include="Models\Mapping\DeviceSensorViewMap.cs" />
+    <Compile Include="Models\Mapping\DeviceToPerformMap.cs" />
+    <Compile Include="Models\Mapping\DeviceToRemoteButtonMap.cs" />
+    <Compile Include="Models\Mapping\DeviceToSensorMap.cs" />
+    <Compile Include="Models\Mapping\DeviceToUserMap.cs" />
+    <Compile Include="Models\Mapping\FloorMap.cs" />
+    <Compile Include="Models\Mapping\FloorToRoomMap.cs" />
+    <Compile Include="Models\Mapping\FloorViewMap.cs" />
+    <Compile Include="Models\Mapping\ModeInfoViewMap.cs" />
+    <Compile Include="Models\Mapping\ModeMap.cs" />
+    <Compile Include="Models\Mapping\ModeToPerformMap.cs" />
+    <Compile Include="Models\Mapping\ModeToTimerMap.cs" />
+    <Compile Include="Models\Mapping\PerformMap.cs" />
+    <Compile Include="Models\Mapping\PerformToControlMap.cs" />
+    <Compile Include="Models\Mapping\RemoteButtonMap.cs" />
+    <Compile Include="Models\Mapping\RoomDeviceViewMap.cs" />
+    <Compile Include="Models\Mapping\RoomMap.cs" />
+    <Compile Include="Models\Mapping\RoomToDeviceMap.cs" />
+    <Compile Include="Models\Mapping\RoomToRemoteMap.cs" />
+    <Compile Include="Models\Mapping\RoomToUserMap.cs" />
+    <Compile Include="Models\Mapping\RoomViewMap.cs" />
+    <Compile Include="Models\Mapping\SensorMap.cs" />
+    <Compile Include="Models\Mapping\SensorToControlMap.cs" />
+    <Compile Include="Models\Mapping\TimerMap.cs" />
+    <Compile Include="Models\Mapping\UserMap.cs" />
+    <Compile Include="Models\Mapping\UserPerformPowerMap.cs" />
+    <Compile Include="Models\Mapping\UserSensorPowerMap.cs" />
+    <Compile Include="Models\Mapping\UserToFloorMap.cs" />
+    <Compile Include="Models\Mapping\UserToModeMap.cs" />
+    <Compile Include="Models\Mapping\UserToTimerMap.cs" />
+    <Compile Include="Models\Mode.cs" />
+    <Compile Include="Models\ModeInfoView.cs" />
+    <Compile Include="Models\ModeToPerform.cs" />
+    <Compile Include="Models\ModeToTimer.cs" />
+    <Compile Include="Models\Perform.cs" />
+    <Compile Include="Models\PerformToControl.cs" />
+    <Compile Include="Models\RemoteButton.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\RoomDeviceView.cs" />
+    <Compile Include="Models\RoomToDevice.cs" />
+    <Compile Include="Models\RoomToRemote.cs" />
+    <Compile Include="Models\RoomToUser.cs" />
+    <Compile Include="Models\RoomView.cs" />
+    <Compile Include="Models\Sensor.cs" />
+    <Compile Include="Models\SensorToControl.cs" />
+    <Compile Include="Models\Timer.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserPerformPower.cs" />
+    <Compile Include="Models\UserSensorPower.cs" />
+    <Compile Include="Models\UserToFloor.cs" />
+    <Compile Include="Models\UserToMode.cs" />
+    <Compile Include="Models\UserToTimer.cs" />
     <Compile Include="NowUser.cs" />
     <Compile Include="PersonalSettings.cs" />
     <Compile Include="PickBox.cs" />
-    <Compile Include="Power_Frm.cs">
+    <Compile Include="Power.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Power_Frm.Designer.cs">
-      <DependentUpon>Power_Frm.cs</DependentUpon>
+    <Compile Include="Power.Designer.cs">
+      <DependentUpon>Power.cs</DependentUpon>
     </Compile>
     <Compile Include="RoomEdit.cs">
       <SubType>Form</SubType>
@@ -177,18 +240,28 @@
     <Compile Include="RoomEdit.Designer.cs">
       <DependentUpon>RoomEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="SenseEdit.cs">
+    <Compile Include="SensePerform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SenseEdit.Designer.cs">
-      <DependentUpon>SenseEdit.cs</DependentUpon>
+    <Compile Include="SensePerform.Designer.cs">
+      <DependentUpon>SensePerform.cs</DependentUpon>
     </Compile>
+    <Compile Include="ServiceManager.cs" />
+    <Compile Include="Service\AlarmService.cs" />
+    <Compile Include="Service\FloorService.cs" />
+    <Compile Include="Service\PerformService.cs" />
+    <Compile Include="Service\RoomService.cs" />
+    <Compile Include="Service\SensorService.cs" />
+    <Compile Include="Service\BaseService.cs" />
+    <Compile Include="Service\Services.cs" />
+    <Compile Include="Service\UserService.cs" />
     <Compile Include="UserControls\ArcMeter.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\ArcMeter.Designer.cs">
       <DependentUpon>ArcMeter.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaseLayer\SqlDao.cs" />
     <Compile Include="UserControls\ControlButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -203,12 +276,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\DeviceService.cs" />
     <Compile Include="UserControls\PictureButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\PictureButton.Designer.cs">
       <DependentUpon>PictureButton.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Devicemanager.resx">
+      <DependentUpon>Devicemanager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FloorEdit.resx">
       <DependentUpon>FloorEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,26 +293,20 @@
       <DependentUpon>FloorRoom.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Role.resx">
-      <DependentUpon>Frm_Role.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Role_AddEdit.resx">
-      <DependentUpon>Frm_Role_AddEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_UserRole.resx">
-      <DependentUpon>Frm_UserRole.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Power_Frm.resx">
-      <DependentUpon>Power_Frm.cs</DependentUpon>
+    <EmbeddedResource Include="Power.resx">
+      <DependentUpon>Power.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RoomEdit.resx">
       <DependentUpon>RoomEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SensePerform.resx">
+      <DependentUpon>SensePerform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ArcMeter.resx">
       <DependentUpon>ArcMeter.cs</DependentUpon>
@@ -476,6 +547,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\13853.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BaseRepository\BaseRepository.csproj">
+      <Project>{225ebb0b-106a-41ea-929c-fab5b731e173}</Project>
+      <Name>BaseRepository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
