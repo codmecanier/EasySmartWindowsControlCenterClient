@@ -216,6 +216,9 @@
     <EmbeddedResource Include="Devicemanager.resx">
       <DependentUpon>Devicemanager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeviceSeleter.resx">
+      <DependentUpon>DeviceSeleter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FloorEdit.resx">
       <DependentUpon>FloorEdit.cs</DependentUpon>
     </EmbeddedResource>

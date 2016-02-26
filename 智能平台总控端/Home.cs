@@ -102,8 +102,8 @@ namespace 智能平台总控端
 
         private void pictureButton8_Click(object sender, EventArgs e)
         {
-            //Power_Frm p = new Power_Frm();
-            //p.ShowDialog();
+            DeviceSeleter ds = new DeviceSeleter();
+            ds.ShowDialog();
         }
 
         private void pictureButton6_Click(object sender, EventArgs e)
@@ -117,14 +117,24 @@ namespace 智能平台总控端
 
         private void pictureButton3_Load(object sender, EventArgs e)
         {
-            Devicemanager dv = new Devicemanager();
-            dv.ShowDialog();
         }
 
         private void pictureButton9_Click(object sender, EventArgs e)
         {
             //Frm_Role role = new Frm_Role();
             //role.ShowDialog();
+        }
+
+        private void pictureButton3_Click(object sender, EventArgs e)
+        {
+            Devicemanager dv = new Devicemanager();
+            dv.ShowDialog();
+        }
+
+        private void pictureButton9_Click_1(object sender, EventArgs e)
+        {
+            DeviceSeleter ds = new DeviceSeleter();
+            ds.ShowDialog();
         }
 
     }
