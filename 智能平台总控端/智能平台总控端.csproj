@@ -132,9 +132,6 @@
     <Compile Include="DeviceSeleter.Designer.cs">
       <DependentUpon>DeviceSeleter.cs</DependentUpon>
     </Compile>
-    <Compile Include="DTO\DeviceDTO.cs" />
-    <Compile Include="DTO\FloorDTO.cs" />
-    <Compile Include="DTO\RoomDTO.cs" />
     <Compile Include="FileObject.cs" />
     <Compile Include="FloorEdit.cs">
       <SubType>Form</SubType>

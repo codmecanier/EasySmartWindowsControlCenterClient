@@ -30,14 +30,12 @@ namespace 智能平台总控端
 
         private void DeviceEditor_Load(object sender, EventArgs e)
         {
-            comboBox1.DisplayMember = "DeviceTypeName";
-            comboBox1.ValueMember = "DeviceTypeID";
             comboBox2.DisplayMember = "FloorName";
             comboBox2.ValueMember = "FloorID";
             comboBox3.DisplayMember = "RoomName";
             comboBox3.ValueMember = "RoomID";
             FloorService fs = new FloorService();
-            comboBox2.DataSource = fs.GetAll(NowUser.CurrentUser);
+            comboBox2.DataSource = fs.GetAll(NowUser.CurrentUser).ToList();
             if(IsEdit)
             {
                 DeviceService ds = new DeviceService();
@@ -75,8 +73,6 @@ namespace 智能平台总控端
             string str = "";
             if (Nametext.Text.Trim().Length == 0)
             { str += "请输入设备名称"; }
-            if (comboBox1.SelectedIndex == -1)
-            { str += "请选择设备类型"; }
             if (comboBox2.SelectedIndex == -1)
             { str += "请选择设备一级分类"; }
             if (comboBox3.SelectedIndex == -1)
@@ -94,6 +90,8 @@ namespace 智能平台总控端
                 model.DeviceInfo = richTextBox1.Text.Trim();
                 model.DeviceAddress = (int)numericUpDown1.Value;
                 model.DeviceImage = Iconpath;
+                model.FloorID = (int)comboBox2.SelectedValue;
+                model.RoomID = (int)comboBox3.SelectedValue;
                 ds.AddDevice(model,NowUser.CurrentUser);
                 
             }
@@ -105,6 +103,8 @@ namespace 智能平台总控端
                 model.DeviceAddress = (int)numericUpDown1.Value;
                 model.DeviceImage = Iconpath;
                 model.DeviceID = DeviceID;
+                model.FloorID = (int)comboBox2.SelectedValue;
+                model.RoomID = (int)comboBox3.SelectedValue;
                 ds.UpdateDevice(model,NowUser.CurrentUser);
             }
             this.Close();

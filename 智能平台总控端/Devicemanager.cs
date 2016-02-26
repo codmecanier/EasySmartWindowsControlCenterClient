@@ -27,7 +27,60 @@ namespace 智能平台总控端
 
         private void GetDeviceData()
         {
-            //throw new NotImplementedException();
+            this.BindingContext[dataGridView1.DataSource].SuspendBinding();
+            DeviceService ds = new DeviceService();
+            dataGridView1.DataSource = null;
+            if (textBox1.Text.Length == 0)
+            {
+                if (listBox1.SelectedIndex == 0)
+                {
+                    if (listBox4.SelectedIndex == 0)
+                    {
+                        dataGridView1.DataSource = ds.GetAll(NowUser.CurrentUser).ToList<DeviceInformationView>();
+                    }
+                    else
+                    {
+                        dataGridView1.DataSource = ds.GetAll(NowUser.CurrentUser).Where(P => P.FloorID == (int)listBox4.SelectedValue).ToList<DeviceInformationView>();
+                    }
+                }
+                else
+                {
+                    if (listBox4.SelectedIndex == 0)
+                    {
+                        dataGridView1.DataSource = ds.GetAll(NowUser.CurrentUser).Where(P => P.RoomID == (int)listBox1.SelectedValue).ToList<DeviceInformationView>();
+                    }
+                    else
+                    {
+                        dataGridView1.DataSource = ds.GetAll(NowUser.CurrentUser).Where(P => P.FloorID == (int)listBox4.SelectedValue).Where(P => P.RoomID == (int)listBox1.SelectedValue).ToList<DeviceInformationView>();
+                    }
+                }
+            }
+            else
+            {
+                if (listBox1.SelectedIndex == 0)
+                {
+                    if (listBox4.SelectedIndex == 0)
+                    {
+                        dataGridView1.DataSource = ds.GetByComdiction(P => P.DeviceName.Contains(textBox1.Text.Trim()), NowUser.CurrentUser).ToList<DeviceInformationView>();
+                    }
+                    else
+                    {
+                        dataGridView1.DataSource = ds.GetByComdiction(P => P.DeviceName.Contains(textBox1.Text.Trim()), NowUser.CurrentUser).Where(P => P.FloorID == (int)listBox4.SelectedValue).ToList<DeviceInformationView>();
+                    }
+                }
+                else
+                {
+                    if (listBox4.SelectedIndex == 0)
+                    {
+                        dataGridView1.DataSource = ds.GetByComdiction(P => P.DeviceName.Contains(textBox1.Text.Trim()), NowUser.CurrentUser).Where(P => P.RoomID == (int)listBox1.SelectedValue).ToList<DeviceInformationView>();
+                    }
+                    else
+                    {
+                        dataGridView1.DataSource = ds.GetByComdiction(P => P.DeviceName.Contains(textBox1.Text.Trim()), NowUser.CurrentUser).Where(P => P.FloorID == (int)listBox4.SelectedValue).Where(P => P.RoomID == (int)listBox1.SelectedValue).ToList<DeviceInformationView>();
+                    }
+                }
+            }
+            this.BindingContext[dataGridView1.DataSource].ResumeBinding();
         }
         private void RefreshData()
         {
@@ -56,7 +109,7 @@ namespace 智能平台总控端
             DeviceEditor form = new DeviceEditor();
             form.IsEdit = false;
             form.ShowDialog();
-            RefreshData();
+            GetDeviceData();
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
@@ -66,7 +119,7 @@ namespace 智能平台总控端
                 DeviceInformationView model = dataGridView1.SelectedRows[0].DataBoundItem as DeviceInformationView;
                 DeviceService ds = Home.services.deviceservice;
                 ds.DeleteDevice(model, NowUser.CurrentUser);
-                RefreshData();
+                GetDeviceData();
             }
             catch
             {
@@ -83,7 +136,7 @@ namespace 智能平台总控端
                 form.IsEdit = true;
                 form.DeviceID = model.DeviceID;
                 form.ShowDialog();
-                RefreshData();
+                GetDeviceData();
             }
             catch
             {
@@ -128,7 +181,30 @@ namespace 智能平台总控端
             if (listBox4.SelectedIndex == 0)
             {
                 RoomService ds = new RoomService();
-                
+                List<RoomView> roomlist = ds.GetAll(NowUser.CurrentUser).ToList<RoomView>();
+                RoomView rw = new RoomView();
+                rw.RoomName = "全部";
+                rw.RoomID = 0;
+                roomlist.Insert(0, rw);
+                listBox1.DataSource = roomlist;
+            }
+            else
+            {
+                RoomService ds = new RoomService();
+                List<RoomView> roomlist = ds.GetByCondiction(P => P.FloorID == (int)listBox4.SelectedValue, NowUser.CurrentUser).ToList<RoomView>();
+                RoomView rw = new RoomView();
+                rw.RoomName = "全部";
+                rw.RoomID = 0;
+                roomlist.Insert(0, rw);
+                listBox1.DataSource = roomlist;
+            }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex == 0)
+            {
+
             }
             else
             {
@@ -136,16 +212,9 @@ namespace 智能平台总控端
             }
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if(listBox1.SelectedIndex==0)
-            {
-
-            }
-            else
-            {
-
-            }
+            GetDeviceData();
         }
     }
 }
