@@ -125,12 +125,20 @@ namespace 智能平台总控端
 
         private void listBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (listBox4.SelectedIndex == 0)
+            {
+                RoomService ds = new RoomService();
+                
+            }
+            else
+            {
 
+            }
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(listBox4.SelectedIndex==0)
+            if(listBox1.SelectedIndex==0)
             {
 
             }
