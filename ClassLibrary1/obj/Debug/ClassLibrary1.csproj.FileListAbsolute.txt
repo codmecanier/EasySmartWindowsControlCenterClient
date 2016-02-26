@@ -1,5 +1,0 @@
-I:\EasySmart智能平台\智能平台总控端\ClassLibrary1\bin\Debug\ClassLibrary1.dll
-I:\EasySmart智能平台\智能平台总控端\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
-I:\EasySmart智能平台\智能平台总控端\ClassLibrary1\obj\Debug\ClassLibrary1.csprojResolveAssemblyReference.cache
-I:\EasySmart智能平台\智能平台总控端\ClassLibrary1\obj\Debug\ClassLibrary1.dll
-I:\EasySmart智能平台\智能平台总控端\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
