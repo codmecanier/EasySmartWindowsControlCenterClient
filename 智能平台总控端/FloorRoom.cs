@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EasySmartDataBaseService.Models;
+using EasySmartDataBaseService.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using 智能平台总控端.Models;
-using 智能平台总控端.Service;
 
 namespace 智能平台总控端
 {
@@ -56,7 +56,7 @@ namespace 智能平台总控端
             {
                 FloorView model = dataGridView1.SelectedRows[0].DataBoundItem as FloorView;
                 FloorService fs = new FloorService();
-                fs.Delete(model);
+                fs.Delete(model,NowUser.CurrentUser);
                 RefreshData();
             }
             catch
@@ -74,11 +74,11 @@ namespace 智能平台总控端
         {
             this.BindingContext[dataGridView2.DataSource].SuspendBinding();
             dataGridView2.DataSource = null;
-            dataGridView2.DataSource = Home.services.roomservice.GetAll().ToList();
+            dataGridView2.DataSource = Home.services.roomservice.GetAll(NowUser.CurrentUser).ToList();
             this.BindingContext[dataGridView2.DataSource].ResumeBinding();
             this.BindingContext[dataGridView1.DataSource].SuspendBinding();
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = Home.services.floorservice.GetAll().ToList();
+            dataGridView1.DataSource = Home.services.floorservice.GetAll(NowUser.CurrentUser).ToList();
             this.BindingContext[dataGridView1.DataSource].ResumeBinding();
         }
 
@@ -88,7 +88,7 @@ namespace 智能平台总控端
             {
                 RoomView model = dataGridView2.SelectedRows[0].DataBoundItem as RoomView;
                 RoomService fs = Home.services.roomservice;
-                fs.Delete(model);
+                fs.Delete(model,NowUser.CurrentUser);
                 RefreshData();
             }
             catch

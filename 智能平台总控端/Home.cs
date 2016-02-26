@@ -102,8 +102,8 @@ namespace 智能平台总控端
 
         private void pictureButton8_Click(object sender, EventArgs e)
         {
-            Power_Frm p = new Power_Frm();
-            p.ShowDialog();
+            //Power_Frm p = new Power_Frm();
+            //p.ShowDialog();
         }
 
         private void pictureButton6_Click(object sender, EventArgs e)
@@ -123,8 +123,8 @@ namespace 智能平台总控端
 
         private void pictureButton9_Click(object sender, EventArgs e)
         {
-            Frm_Role role = new Frm_Role();
-            role.ShowDialog();
+            //Frm_Role role = new Frm_Role();
+            //role.ShowDialog();
         }
 
     }

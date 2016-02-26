@@ -27,7 +27,7 @@ namespace 智能平台总控端
 
         private void GetDeviceData()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
         private void RefreshData()
         {
@@ -41,7 +41,7 @@ namespace 智能平台总控端
             fw.FloorName = "全部";
             fw.FloorID = 0;
             floorlist.Insert(0, fw);
-            listBox4.DataSource = fw;
+            listBox4.DataSource = floorlist;
         }
 
         private void label2_Click(object sender, EventArgs e)

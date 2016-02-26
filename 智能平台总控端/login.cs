@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EasySmartDataBaseService.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,7 +26,8 @@ namespace 智能平台总控端
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Home.services.LoadAllServices();
-            if (Home.services.userservice.Login(comboBox1.Text, textBox2.Text))
+            User user=Home.services.userservice.Login(comboBox1.Text, textBox2.Text);
+            if (null != user)
             {
                 PersonalSettings ps = setting.Where<PersonalSettings>(P => P.Username == comboBox1.Text.Trim()).FirstOrDefault<PersonalSettings>();
                 if (ps != null)
@@ -45,7 +47,7 @@ namespace 智能平台总控端
                     pss.Password = textBox2.Text;
                     setting.Add(pss);
                 }
-
+                NowUser.CurrentUser = user;
                 Home.file.Storge(setting, "UserPersonalSettings.bin");
                 this.Close();
             }

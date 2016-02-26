@@ -134,8 +134,6 @@
     </Compile>
     <Compile Include="DTO\DeviceDTO.cs" />
     <Compile Include="DTO\FloorDTO.cs" />
-    <Compile Include="DTO\PerformOrSensorDTO.cs" />
-    <Compile Include="DTO\PowerDTO.cs" />
     <Compile Include="DTO\RoomDTO.cs" />
     <Compile Include="FileObject.cs" />
     <Compile Include="FloorEdit.cs">
@@ -149,24 +147,6 @@
     </Compile>
     <Compile Include="FloorRoom.Designer.cs">
       <DependentUpon>FloorRoom.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Role.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Role.Designer.cs">
-      <DependentUpon>Frm_Role.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_Role_AddEdit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_Role_AddEdit.Designer.cs">
-      <DependentUpon>Frm_Role_AddEdit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_UserRole.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_UserRole.Designer.cs">
-      <DependentUpon>Frm_UserRole.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -189,12 +169,6 @@
     </Compile>
     <Compile Include="PersonalSettings.cs" />
     <Compile Include="PickBox.cs" />
-    <Compile Include="Power_Frm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Power_Frm.Designer.cs">
-      <DependentUpon>Power_Frm.cs</DependentUpon>
-    </Compile>
     <Compile Include="RoomEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,15 +226,6 @@
       <DependentUpon>FloorRoom.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Role.resx">
-      <DependentUpon>Frm_Role.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Role_AddEdit.resx">
-      <DependentUpon>Frm_Role_AddEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_UserRole.resx">
-      <DependentUpon>Frm_UserRole.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -269,9 +234,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PerformEdit.resx">
       <DependentUpon>PerformEdit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Power_Frm.resx">
-      <DependentUpon>Power_Frm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RoomEdit.resx">
       <DependentUpon>RoomEdit.cs</DependentUpon>

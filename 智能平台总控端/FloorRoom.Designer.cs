@@ -419,7 +419,7 @@
             // 
             // floorViewBindingSource
             // 
-            this.floorViewBindingSource.DataSource = typeof(智能平台总控端.Models.FloorView);
+            this.floorViewBindingSource.DataSource = typeof(EasySmartDataBaseService.Models.FloorView);
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -472,7 +472,7 @@
             // 
             // roomViewBindingSource
             // 
-            this.roomViewBindingSource.DataSource = typeof(智能平台总控端.Models.RoomView);
+            this.roomViewBindingSource.DataSource = typeof(EasySmartDataBaseService.Models.RoomView);
             // 
             // FloorRoom
             // 
