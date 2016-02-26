@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EasySmartDataBaseService.Models;
+using EasySmartDataBaseService.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using 智能平台总控端.Models;
-using 智能平台总控端.Service;
 
 namespace 智能平台总控端
 {
@@ -25,8 +25,8 @@ namespace 智能平台总控端
 
         public void Display(int RoomID)
         {
-            DeviceInformationViewService ds = new DeviceInformationViewService();
-            GenerateDevicesBtn(ds.GetByCondition(P => P.RoomID == RoomID).ToList());
+            DeviceService ds = new DeviceService();
+            GenerateDevicesBtn(ds.GetByComdiction(P => P.RoomID == RoomID,NowUser.CurrentUser).ToList());
             this.ShowDialog();
         }
         private void GenerateDevicesBtn(List<DeviceInformationView> device)
@@ -73,11 +73,11 @@ namespace 智能平台总控端
         { ((PictureBox)sender).BackColor = this.BackColor; }
         private void ClickPicEvent(object sender, MouseEventArgs e)
         {
-            PictureBox btn = (PictureBox)sender;
-            int i = int.Parse(btn.Name);
-            DeviceControler form = new DeviceControler();
-            form.DeviceID = i;
-            form.ShowDialog();
+            //PictureBox btn = (PictureBox)sender;
+            //int i = int.Parse(btn.Name);
+            ////DeviceControler form = new DeviceControler();
+            //form.DeviceID = i;
+            //form.ShowDialog();
         }
     }
 }

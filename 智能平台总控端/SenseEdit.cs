@@ -7,14 +7,70 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EasySmartDataBaseService;
+using EasySmartDataBaseService.Service;
+using EasySmartDataBaseService.Models;
 
 namespace 智能平台总控端
 {
-    public partial class SenseEdit_ : Form
+    public partial class SenseEdit : Form
     {
-        public SenseEdit_()
+        public int SenseID;
+        public int DeviceID;
+        public bool IsEdit = false;
+        public SenseEdit()
         {
             InitializeComponent();
+        }
+
+        private void SenseEdit_Load(object sender, EventArgs e)
+        {
+            if (IsEdit )
+            {
+                SensorService ss = new SensorService();
+                DeviceSensorView model = ss.GetFirstOrDefault(P => P.SenseID == SenseID,NowUser.CurrentUser);
+                Nametext.Text = model.SenseName;
+                numericUpDown1.Value = model.SenserAddress;
+                numericUpDown3.Value = model.SensorCompiction;
+                numericUpDown2.Value = model.SensorBase;
+                textBox1.Text = model.SensorUnit;
+                richTextBox1.Text = model.SensorInfo;
+            }
+        }
+
+        private void Cancelbtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void OKbtn_Click(object sender, EventArgs e)
+        {
+            if (!IsEdit)
+            {
+                SensorService ss = new SensorService();
+                DeviceSensorView model = new DeviceSensorView();
+                model.SenseName = Nametext.Text.Trim();
+                model.SensorBase = (decimal)numericUpDown2.Value;
+                model.SenserAddress = (int)numericUpDown1.Value;
+                model.SensorCompiction = (decimal)numericUpDown3.Value;
+                model.SensorInfo = richTextBox1.Text.Trim();
+                model.SensorUnit = textBox1.Text.Trim();
+                ss.AddSensor(model,NowUser.CurrentUser);
+            }
+            else
+            {
+                SensorService ss = new SensorService();
+                DeviceSensorView model = new DeviceSensorView();
+                model.SenseID = SenseID;
+                model.SenseName = Nametext.Text.Trim();
+                model.SensorBase = numericUpDown2.Value;
+                model.SenserAddress = (int)numericUpDown1.Value;
+                model.SensorCompiction = numericUpDown3.Value;
+                model.SensorInfo = richTextBox1.Text.Trim();
+                model.SensorUnit = textBox1.Text.Trim();
+                ss.Update(model,NowUser.CurrentUser);
+            }
+            this.Close();
         }
     }
 }

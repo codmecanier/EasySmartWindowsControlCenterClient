@@ -114,6 +114,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeviceEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceEditor.Designer.cs">
+      <DependentUpon>DeviceEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Devicemanager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Devicemanager.Designer.cs">
+      <DependentUpon>Devicemanager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceSeleter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeviceSeleter.Designer.cs">
+      <DependentUpon>DeviceSeleter.cs</DependentUpon>
+    </Compile>
     <Compile Include="DTO\DeviceDTO.cs" />
     <Compile Include="DTO\FloorDTO.cs" />
     <Compile Include="DTO\PerformOrSensorDTO.cs" />
@@ -163,6 +181,12 @@
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="NowUser.cs" />
+    <Compile Include="PerformEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PerformEdit.Designer.cs">
+      <DependentUpon>PerformEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="PersonalSettings.cs" />
     <Compile Include="PickBox.cs" />
     <Compile Include="Power_Frm.cs">
@@ -182,6 +206,12 @@
     </Compile>
     <Compile Include="SenseEdit.Designer.cs">
       <DependentUpon>SenseEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SensePerform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SensePerform.Designer.cs">
+      <DependentUpon>SensePerform.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ArcMeter.cs">
       <SubType>UserControl</SubType>
@@ -209,6 +239,12 @@
     <Compile Include="UserControls\PictureButton.Designer.cs">
       <DependentUpon>PictureButton.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DeviceEditor.resx">
+      <DependentUpon>DeviceEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Devicemanager.resx">
+      <DependentUpon>Devicemanager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FloorEdit.resx">
       <DependentUpon>FloorEdit.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,11 +267,20 @@
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PerformEdit.resx">
+      <DependentUpon>PerformEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Power_Frm.resx">
       <DependentUpon>Power_Frm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RoomEdit.resx">
       <DependentUpon>RoomEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SenseEdit.resx">
+      <DependentUpon>SenseEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SensePerform.resx">
+      <DependentUpon>SensePerform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ArcMeter.resx">
       <DependentUpon>ArcMeter.cs</DependentUpon>
@@ -260,6 +305,7 @@
       <DependentUpon>PictureButton.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\EasySmartDataBaseService.Models.DeviceInformationView.datasource" />
     <None Include="Properties\DataSources\智能平台总控端.Models.FloorView.datasource" />
     <None Include="Properties\DataSources\智能平台总控端.Models.RoomView.datasource" />
     <None Include="Properties\Settings.settings">

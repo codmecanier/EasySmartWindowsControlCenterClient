@@ -7,16 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using 智能灯泡总控程序.BaseCopper;
-using 智能平台总控端.Models;
-using 智能平台总控端.Service;
+using EasySmartDataBaseService;
+using EasySmartDataBaseService.Service;
+using EasySmartDataBaseService.Models;
 
 namespace 智能平台总控端
 {
-    public partial class DeviceEditor : BaseForm
+    public partial class DeviceEditor : Form
     {
         public string Iconpath = "";
         public int DeviceID;
+        public bool IsEdit;
         public DeviceEditor()
         {
             InitializeComponent();
@@ -36,18 +37,15 @@ namespace 智能平台总控端
             comboBox3.DisplayMember = "RoomName";
             comboBox3.ValueMember = "RoomID";
             FloorService fs = new FloorService();
-            comboBox2.DataSource = fs.GetAll();
-            DeviceTypeService dts = new DeviceTypeService();
-            comboBox1.DataSource = dts.GetAll().ToList();
-            if(WindowsState.Edit==state)
+            comboBox2.DataSource = fs.GetAll(NowUser.CurrentUser);
+            if(IsEdit)
             {
-                DeviceInformationViewService ds = new DeviceInformationViewService();
-                DeviceInformationView model = ds.GetByFirstOrDefault(P => P.DeviceID == DeviceID);
+                DeviceService ds = new DeviceService();
+                DeviceInformationView model = ds.GetFirstOrDefault(P => P.DeviceID == DeviceID,NowUser.CurrentUser);
                 Nametext.Text = model.DeviceName;
                 richTextBox1.Text = model.DeviceInfo;
                 numericUpDown1.Value = model.DeviceAddress;
                 Iconpath = model.DeviceImage;
-                comboBox1.SelectedValue = model.DeviceTypeID;
                 comboBox2.SelectedValue = model.FloorID;
                 comboBox3.SelectedValue = model.RoomID;           
             }
@@ -89,44 +87,25 @@ namespace 智能平台总控端
                 return;
             }
             DeviceService ds = new DeviceService();
-            DeviceTypeDeviceViewService dtdvs = new DeviceTypeDeviceViewService();
-            DeviceTypeToDeviceService dttdSer = new DeviceTypeToDeviceService();
-            RoomToDeviceService rdvs = new RoomToDeviceService();
-            if(state==WindowsState.Add )
+            if(!IsEdit)
             {
-                Device model = new Device();
+                DeviceInformationView model = new DeviceInformationView();
                 model.DeviceName = Nametext.Text.Trim();
                 model.DeviceInfo = richTextBox1.Text.Trim();
                 model.DeviceAddress = (int)numericUpDown1.Value;
                 model.DeviceImage = Iconpath;
-                ds.Add(model);
-                DeviceTypeToDevice dttd = new DeviceTypeToDevice();
-                dttd.DeviceID = model.DeviceID;
-                dttd.DeviceTypeID = (int)comboBox1.SelectedValue;
-                RoomToDevice rtd = new RoomToDevice();
-                rtd.DeviceID = model.DeviceID;
-                rtd.RoomID = (int)comboBox3.SelectedValue;
-                dttdSer.Add(dttd);
-                rdvs.Add(rtd);
+                ds.AddDevice(model,NowUser.CurrentUser);
                 
             }
             else
             {
-                Device model = new Device();
+                DeviceInformationView model = new DeviceInformationView();
                 model.DeviceName = Nametext.Text.Trim();
                 model.DeviceInfo = richTextBox1.Text.Trim();
                 model.DeviceAddress = (int)numericUpDown1.Value;
                 model.DeviceImage = Iconpath;
                 model.DeviceID = DeviceID;
-                ds.Update(model);
-                DeviceTypeToDevice dttd = new DeviceTypeToDevice();
-                dttd.DeviceID = model.DeviceID;
-                dttd.DeviceTypeID = (int)comboBox1.SelectedValue;
-                RoomToDevice rtd = new RoomToDevice();
-                rtd.DeviceID = model.DeviceID;
-                rtd.RoomID = (int)comboBox3.SelectedValue;
-                dttdSer.Update(dttd);
-                rdvs.Update(rtd);
+                ds.UpdateDevice(model,NowUser.CurrentUser);
             }
             this.Close();
         }
@@ -143,9 +122,9 @@ namespace 智能平台总控端
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FloorRoomViewService frvs = new FloorRoomViewService();
+            RoomService frvs = new RoomService();
             comboBox3.DataSource = null;
-            comboBox3.DataSource = frvs.GetByCondition(P => P.FloorID == (int)comboBox2.SelectedValue).ToList();
+            comboBox3.DataSource = frvs.GetByCondiction(P => P.FloorID == (int)comboBox2.SelectedValue,NowUser.CurrentUser).ToList();
             comboBox3.DisplayMember = "RoomName";
             comboBox3.ValueMember = "RoomID";
         }

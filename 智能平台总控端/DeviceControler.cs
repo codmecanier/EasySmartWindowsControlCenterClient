@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using 智能平台总控端.Service;
+using EasySmartDataBaseService;
+using EasySmartDataBaseService.Models;
+using EasySmartDataBaseService.Service;
 
 namespace 智能平台总控端
 {
@@ -25,31 +27,31 @@ namespace 智能平台总控端
             DisplayPerforms();
             pictureBox2.Visible = false;
         }
-        private GroupBox NewSensorController(DeviceSensorView model)
-        {
-            GroupBox gb = new GroupBox();
-            Label lb = new Label();
-            TextBox tb = new TextBox();
-            ProgressBar pb = new ProgressBar();
-            gb.Controls.Add(lb);
-            gb.Controls.Add(pb);
-            gb.Controls.Add(tb);
-            gb.Name = model.SenseID.ToString();
-            gb.Size = new System.Drawing.Size(474, 93);
-            gb.Text = model.SenseName;
-            lb.Location = new System.Drawing.Point(13, 40);
-            lb.Size = new System.Drawing.Size(69, 25);
-            lb.Text = "状态：";
-            pb.Location = new System.Drawing.Point(88, 32);
-            pb.Size = new System.Drawing.Size(198, 41);
-            pb.Maximum = (int)model.SensorMaxim;
-            pb.Minimum = (int)model.SensorMinim;
-            pb.Value = (int)model.SensorOutPut;
-            tb.Location = new System.Drawing.Point(292, 37);
-            tb.Size = new System.Drawing.Size(176, 33);
-            tb.Text = model.SensorOutPut.ToString();
-            tb.Text += model.SensorUnit;
-            return gb;
+        //private GroupBox NewSensorController(DeviceSensorView model)
+        //{
+        //    GroupBox gb = new GroupBox();
+        //    Label lb = new Label();
+        //    TextBox tb = new TextBox();
+        //    ProgressBar pb = new ProgressBar();
+        //    gb.Controls.Add(lb);
+        //    gb.Controls.Add(pb);
+        //    gb.Controls.Add(tb);
+        //    gb.Name = model.SenseID.ToString();
+        //    gb.Size = new System.Drawing.Size(474, 93);
+        //    gb.Text = model.SenseName;
+        //    lb.Location = new System.Drawing.Point(13, 40);
+        //    lb.Size = new System.Drawing.Size(69, 25);
+        //    lb.Text = "状态：";
+        //    pb.Location = new System.Drawing.Point(88, 32);
+        //    pb.Size = new System.Drawing.Size(198, 41);
+        //    pb.Maximum = (int)model.SensorMaxim;
+        //    pb.Minimum = (int)model.SensorMinim;
+        //    pb.Value = (int)model.SensorOutPut;
+        //    tb.Location = new System.Drawing.Point(292, 37);
+        //    tb.Size = new System.Drawing.Size(176, 33);
+        //    tb.Text = model.SensorOutPut.ToString();
+        //    tb.Text += model.SensorUnit;
+        //    return gb;
         }
         private GroupBox NewPerformController(DevicePerformView model)
         {
@@ -99,8 +101,8 @@ namespace 智能平台总控端
 
         private void DisplayPerforms()
         {
-            DevicePerformViewService model = new DevicePerformViewService();
-            IEnumerable<DevicePerformView> list = model.GetByCondition(P => P.DeviceID == DeviceID);
+            PerformService model = new PerformService();
+            IEnumerable<DevicePerformView> list = model.GetByCondiction(P => P.DeviceID == DeviceID,NowUser.CurrentUser);
             flowLayoutPanel2.Controls.Clear();
             foreach (DevicePerformView models in list)
             {
@@ -121,25 +123,25 @@ namespace 智能平台总控端
         }
         private void NumericUpdate(object sender, EventArgs e)
         {
-            NumericUpDown num = (NumericUpDown)sender;
-            int id = int.Parse(num.Name.Split('N')[0]);
-            TrackBar ctrl = this.Controls.Find(id.ToString() + "T",true)[0] as TrackBar;
-            ctrl.Value = (int)num.Value;
-            pictureBox2.Visible = true;
-            this.Refresh();
-            PerformService ps = new PerformService();
-            Perform model = ps.GetByFirstOrDefault(P => P.PerformID==id);
-            model.PerformInPut = num.Value;
-            ps.Update(model);
-            pictureBox2.Visible = false;
-            this.Refresh();
+            //NumericUpDown num = (NumericUpDown)sender;
+            //int id = int.Parse(num.Name.Split('N')[0]);
+            //TrackBar ctrl = this.Controls.Find(id.ToString() + "T",true)[0] as TrackBar;
+            //ctrl.Value = (int)num.Value;
+            //pictureBox2.Visible = true;
+            //this.Refresh();
+            //PerformService ps = new PerformService();
+            //DevicePerformView model = ps.GetByCondiction(P => P.PerformID==id,NowUser.CurrentUser);
+            //model.PerformInPut = num.Value;
+            //ps.Update(model, NowUser.CurrentUser);
+            //pictureBox2.Visible = false;
+            //this.Refresh();
         }
         private void TrackUpdate(object sender, EventArgs e)
         {
-            TrackBar num = (TrackBar)sender;
-            int id = int.Parse(num.Name.Split('T')[0]);
-            NumericUpDown ctrl = this.Controls.Find(id.ToString() + "N", true)[0] as NumericUpDown;
-            ctrl.Value = (decimal)num.Value;
+            //TrackBar num = (TrackBar)sender;
+            //int id = int.Parse(num.Name.Split('T')[0]);
+            //NumericUpDown ctrl = this.Controls.Find(id.ToString() + "N", true)[0] as NumericUpDown;
+            //ctrl.Value = (decimal)num.Value;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

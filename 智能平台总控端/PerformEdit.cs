@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EasySmartDataBaseService.Models;
+using EasySmartDataBaseService.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,15 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using 智能平台总控端.Models;
-using 智能平台总控端.Service;
 
 namespace 智能平台总控端
 {
-    public partial class PerformEdit : BaseForm
+    public partial class PerformEdit : Form
     {
         public int PerformID;
         public int DeviceID;
+        public bool IsEdit = false;
         public PerformEdit()
         {
             InitializeComponent();
@@ -23,10 +24,10 @@ namespace 智能平台总控端
 
         private void PerformEdit_Load(object sender, EventArgs e)
         {
-            if (state == WindowsState.Edit)
+            if (IsEdit)
             {
                 PerformService ss = new PerformService();
-                Perform model = ss.GetByFirstOrDefault(P => P.PerformID == PerformID);
+                DevicePerformView model = ss.GetFirstOrDefault(P => P.PerformID == PerformID,NowUser.CurrentUser);
                 Nametext.Text = model.PerformName;
                 numericUpDown1.Value = model.PerformAddress;
                 numericUpDown3.Value = model.PerformCopmcition;
@@ -43,10 +44,10 @@ namespace 智能平台总控端
 
         private void OKbtn_Click(object sender, EventArgs e)
         {
-            if (state == WindowsState.Add)
+            if (!IsEdit)
             {
                 PerformService ss = new PerformService();
-                Perform model = new Perform();
+                DevicePerformView model = new DevicePerformView();
                 model.PerformName = Nametext.Text.Trim();
                 model.PerformBase = (int)numericUpDown2.Value;
                 model.PerformAddress = (int)numericUpDown1.Value;
@@ -55,17 +56,12 @@ namespace 智能平台总控端
                 model.PerformUnit = textBox1.Text.Trim();
                 model.PerformMaxim = (int)Nummax.Value;
                 model.PerformMinum = (int)Nummin.Value;
-                ss.Add(model);
-                DeviceToPerformService dtss = new DeviceToPerformService();
-                DeviceToPerform cck = new DeviceToPerform();
-                cck.PerformID = model.PerformID;
-                cck.DeviceID = DeviceID;
-                dtss.Add(cck);
+                ss.AddPerform(model,NowUser.CurrentUser);
             }
             else
             {
                 PerformService ss = new PerformService();
-                Perform model = new Perform();
+                DevicePerformView model = new DevicePerformView();
                 model.PerformID = PerformID;
                 model.PerformName = Nametext.Text.Trim();
                 model.PerformBase = (int)numericUpDown2.Value;
@@ -75,7 +71,7 @@ namespace 智能平台总控端
                 model.PerformUnit = textBox1.Text.Trim();
                 model.PerformMaxim = (int)Nummax.Value;
                 model.PerformMinum = (int)Nummin.Value;
-                ss.Update(model);
+                ss.Update(model,NowUser.CurrentUser);
             }
             this.Close();
         }

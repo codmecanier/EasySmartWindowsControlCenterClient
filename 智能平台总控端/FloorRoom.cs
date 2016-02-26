@@ -40,8 +40,10 @@ namespace 智能平台总控端
             {
                 FloorView model = dataGridView1.SelectedRows[0].DataBoundItem as FloorView;
                 FloorEdit fe = new FloorEdit();
+                fe.IsEdit = true;
                 fe.floorID = model.FloorID;
                 fe.ShowDialog();
+                RefreshData();
             }
             catch
             {
@@ -83,17 +85,17 @@ namespace 智能平台总控端
 
         private void pictureBox5_Click_1(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 RoomView model = dataGridView2.SelectedRows[0].DataBoundItem as RoomView;
                 RoomService fs = Home.services.roomservice;
                 fs.Delete(model, NowUser.CurrentUser);
                 RefreshData();
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("请正确选中行", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            }
+            catch
+            {
+                MessageBox.Show("请正确选中行", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)

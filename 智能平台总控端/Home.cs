@@ -117,8 +117,8 @@ namespace 智能平台总控端
 
         private void pictureButton3_Load(object sender, EventArgs e)
         {
-            //Devicemanager dv = new Devicemanager();
-            //dv.ShowDialog();
+            Devicemanager dv = new Devicemanager();
+            dv.ShowDialog();
         }
 
         private void pictureButton9_Click(object sender, EventArgs e)

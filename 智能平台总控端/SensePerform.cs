@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EasySmartDataBaseService.Models;
+using EasySmartDataBaseService.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using 智能平台总控端.Models;
-using 智能平台总控端.Service;
 
 namespace 智能平台总控端
 {
@@ -42,22 +42,22 @@ namespace 智能平台总控端
         {
             SenseEdit form = new SenseEdit();
             form.DeviceID = DeviceID;
-            form.state = WindowsState.Add;
+            form.IsEdit = false;
             form.ShowDialog();
             BindingData();
         }
 
         private void BindingData()
         {
-            DeviceSensorViewService model = new DeviceSensorViewService();
+            SensorService model = new SensorService();
             this.BindingContext[dataGridView1.DataSource].SuspendBinding();
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = model.GetByCondition(P => P.DeviceID == DeviceID).ToList();
+            dataGridView1.DataSource = model.GetByCondiction(P => P.DeviceID == DeviceID,NowUser.CurrentUser).ToList();
             this.BindingContext[dataGridView1.DataSource].ResumeBinding();
-            DevicePerformViewService model2 = new DevicePerformViewService();
+            PerformService model2 = new PerformService();
             this.BindingContext[dataGridView2.DataSource].SuspendBinding();
             dataGridView2.DataSource = null;
-            dataGridView2.DataSource = model2.GetByCondition(P => P.DeviceID == DeviceID).ToList();
+            dataGridView2.DataSource = model2.GetByCondiction(P => P.DeviceID == DeviceID, NowUser.CurrentUser).ToList();
             this.BindingContext[dataGridView2.DataSource].ResumeBinding();
         }
 
@@ -67,8 +67,7 @@ namespace 智能平台总控端
             {
                 DeviceSensorView model = dataGridView1.SelectedRows[0].DataBoundItem as DeviceSensorView;
                 SensorService ss = new SensorService();
-                Sensor dat = ss.GetByFirstOrDefault(P => P.SenseID == model.SenseID);
-                ss.Delete(dat);
+                ss.DeleteSensor(model,NowUser.CurrentUser );
                 BindingData();
             }
             catch
@@ -83,7 +82,7 @@ namespace 智能平台总控端
             {
                 DeviceSensorView model = dataGridView1.SelectedRows[0].DataBoundItem as DeviceSensorView;
                 SenseEdit form = new SenseEdit();
-                form.state = WindowsState.Edit;
+                form.IsEdit = true;
                 form.SenseID = model.SenseID;
                 form.ShowDialog();
                 BindingData();
@@ -98,7 +97,7 @@ namespace 智能平台总控端
         {
             PerformEdit form = new PerformEdit();
             form.DeviceID = DeviceID;
-            form.state = WindowsState.Add;
+            form.IsEdit = false;
             form.ShowDialog();
             BindingData();
         }
@@ -109,8 +108,7 @@ namespace 智能平台总控端
             //{
             DevicePerformView model = dataGridView2.SelectedRows[0].DataBoundItem as DevicePerformView;
             PerformService ss = new PerformService();
-            Perform dat = ss.GetByFirstOrDefault(P => P.PerformID == model.PerformID);
-            ss.Delete(dat);
+            ss.DeletePerform(model,NowUser.CurrentUser);
             BindingData();
 
             //}
@@ -126,7 +124,7 @@ namespace 智能平台总控端
             {
                 DevicePerformView model = dataGridView2.SelectedRows[0].DataBoundItem as DevicePerformView;
                 PerformEdit form = new PerformEdit();
-                form.state = WindowsState.Edit;
+                form.IsEdit = true;
                 form.PerformID = model.PerformID;
                 form.ShowDialog();
                 BindingData();

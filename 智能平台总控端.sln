@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "智能平台总控端", "智能平台总控端\智能平台总控端.csproj", "{0A280741-F987-45F6-88FC-C1616C891753}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasySmartDataBaseService", "..\EasySmartDataBaseService\EasySmartDataBaseService\数据库读写\EasySmartDataBaseService.csproj", "{D56111E8-FEB6-4918-910E-19317453B4A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0A280741-F987-45F6-88FC-C1616C891753}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A280741-F987-45F6-88FC-C1616C891753}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A280741-F987-45F6-88FC-C1616C891753}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D56111E8-FEB6-4918-910E-19317453B4A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D56111E8-FEB6-4918-910E-19317453B4A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D56111E8-FEB6-4918-910E-19317453B4A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D56111E8-FEB6-4918-910E-19317453B4A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

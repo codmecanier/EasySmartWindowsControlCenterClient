@@ -204,7 +204,6 @@
             // 
             // devicePerformViewBindingSource
             // 
-            this.devicePerformViewBindingSource.DataSource = typeof(智能平台总控端.Models.DevicePerformView);
             // 
             // panel4
             // 
@@ -424,7 +423,6 @@
             // 
             // deviceSensorViewBindingSource
             // 
-            this.deviceSensorViewBindingSource.DataSource = typeof(智能平台总控端.Models.DeviceSensorView);
             // 
             // panel3
             // 

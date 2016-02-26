@@ -1,0 +1,9 @@
+C:\Users\zhhaso\Desktop\easysmart\智能平台总控端\ControlPanelEditor\bin\Debug\ControlPanelEditor.exe.config
+C:\Users\zhhaso\Desktop\easysmart\智能平台总控端\ControlPanelEditor\bin\Debug\ControlPanelEditor.exe
+C:\Users\zhhaso\Desktop\easysmart\智能平台总控端\ControlPanelEditor\bin\Debug\ControlPanelEditor.pdb
+C:\Users\zhhaso\Desktop\easysmart\智能平台总控端\ControlPanelEditor\obj\Debug\ControlPanelEditor.Form1.resources
+C:\Users\zhhaso\Desktop\easysmart\智能平台总控端\ControlPanelEditor\obj\Debug\ControlPanelEditor.Properties.Resources.resources
+C:\Users\zhhaso\Desktop\easysmart\智能平台总控端\ControlPanelEditor\obj\Debug\ControlPanelEditor.csproj.GenerateResource.Cache
+C:\Users\zhhaso\Desktop\easysmart\智能平台总控端\ControlPanelEditor\obj\Debug\ControlPanelEditor.exe
+C:\Users\zhhaso\Desktop\easysmart\智能平台总控端\ControlPanelEditor\obj\Debug\ControlPanelEditor.pdb
+C:\Users\zhhaso\Desktop\easysmart\智能平台总控端\ControlPanelEditor\obj\Debug\ControlPanelEditor.csprojResolveAssemblyReference.cache
