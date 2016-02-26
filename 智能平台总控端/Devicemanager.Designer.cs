@@ -41,13 +41,12 @@
             this.Addbtn = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.listBox4 = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -56,28 +55,24 @@
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.deviceIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deviceNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deviceAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FloorName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RoomName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deviceInfoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.isAdminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.floorNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.floorInfoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deviceInformationViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.deviceBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EditBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DeleteBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Addbtn)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceInformationViewBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deviceBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -198,13 +193,12 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.listBox1);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.listBox4);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 88);
@@ -212,16 +206,47 @@
             this.panel2.Size = new System.Drawing.Size(212, 493);
             this.panel2.TabIndex = 1;
             // 
-            // pictureBox3
+            // label1
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(142, 135);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(59, 46);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(12, 256);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 25);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "二级分类";
+            // 
+            // listBox1
+            // 
+            this.listBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 21;
+            this.listBox1.Location = new System.Drawing.Point(8, 284);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(194, 193);
+            this.listBox1.TabIndex = 16;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.Location = new System.Drawing.Point(12, 90);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(88, 25);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "一级分类";
+            // 
+            // listBox4
+            // 
+            this.listBox4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.listBox4.FormattingEnabled = true;
+            this.listBox4.ItemHeight = 21;
+            this.listBox4.Location = new System.Drawing.Point(8, 123);
+            this.listBox4.Name = "listBox4";
+            this.listBox4.Size = new System.Drawing.Size(194, 130);
+            this.listBox4.TabIndex = 14;
+            this.listBox4.SelectedIndexChanged += new System.EventHandler(this.listBox4_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -233,28 +258,6 @@
             this.button1.Text = "开始";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(77, 135);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(59, 46);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 135);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 46);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -264,26 +267,6 @@
             this.label3.Size = new System.Drawing.Size(88, 25);
             this.label3.TabIndex = 10;
             this.label3.Text = "搜索设备";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(12, 184);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 25);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "设备类型";
-            // 
-            // listBox1
-            // 
-            this.listBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 21;
-            this.listBox1.Location = new System.Drawing.Point(8, 217);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(194, 235);
-            this.listBox1.TabIndex = 8;
             // 
             // textBox1
             // 
@@ -359,12 +342,13 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.deviceIDDataGridViewTextBoxColumn,
-            this.deviceNameDataGridViewTextBoxColumn,
-            this.deviceAddressDataGridViewTextBoxColumn,
-            this.FloorName,
-            this.RoomName,
-            this.deviceInfoDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn1,
+            this.isAdminDataGridViewCheckBoxColumn,
+            this.dataGridViewTextBoxColumn2,
+            this.roomNameDataGridViewTextBoxColumn,
+            this.floorNameDataGridViewTextBoxColumn,
+            this.floorInfoDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn3});
             this.dataGridView1.DataSource = this.deviceInformationViewBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -375,52 +359,52 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // deviceIDDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.deviceIDDataGridViewTextBoxColumn.DataPropertyName = "DeviceID";
-            this.deviceIDDataGridViewTextBoxColumn.HeaderText = "设备ID";
-            this.deviceIDDataGridViewTextBoxColumn.Name = "deviceIDDataGridViewTextBoxColumn";
-            this.deviceIDDataGridViewTextBoxColumn.Width = 80;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "DeviceName";
+            this.dataGridViewTextBoxColumn1.HeaderText = "设备名";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // deviceNameDataGridViewTextBoxColumn
+            // isAdminDataGridViewCheckBoxColumn
             // 
-            this.deviceNameDataGridViewTextBoxColumn.DataPropertyName = "DeviceName";
-            this.deviceNameDataGridViewTextBoxColumn.HeaderText = "设备名";
-            this.deviceNameDataGridViewTextBoxColumn.Name = "deviceNameDataGridViewTextBoxColumn";
-            this.deviceNameDataGridViewTextBoxColumn.Width = 150;
+            this.isAdminDataGridViewCheckBoxColumn.DataPropertyName = "IsAdmin";
+            this.isAdminDataGridViewCheckBoxColumn.HeaderText = "权限";
+            this.isAdminDataGridViewCheckBoxColumn.Name = "isAdminDataGridViewCheckBoxColumn";
+            this.isAdminDataGridViewCheckBoxColumn.Width = 50;
             // 
-            // deviceAddressDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.deviceAddressDataGridViewTextBoxColumn.DataPropertyName = "DeviceAddress";
-            this.deviceAddressDataGridViewTextBoxColumn.HeaderText = "设备地址";
-            this.deviceAddressDataGridViewTextBoxColumn.Name = "deviceAddressDataGridViewTextBoxColumn";
-            this.deviceAddressDataGridViewTextBoxColumn.Width = 80;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "DeviceAddress";
+            this.dataGridViewTextBoxColumn2.HeaderText = "物理地址";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // FloorName
+            // roomNameDataGridViewTextBoxColumn
             // 
-            this.FloorName.DataPropertyName = "FloorName";
-            this.FloorName.HeaderText = "一级分类";
-            this.FloorName.Name = "FloorName";
+            this.roomNameDataGridViewTextBoxColumn.DataPropertyName = "RoomName";
+            this.roomNameDataGridViewTextBoxColumn.HeaderText = "所在房间";
+            this.roomNameDataGridViewTextBoxColumn.Name = "roomNameDataGridViewTextBoxColumn";
             // 
-            // RoomName
+            // floorNameDataGridViewTextBoxColumn
             // 
-            this.RoomName.DataPropertyName = "RoomName";
-            this.RoomName.HeaderText = "二级分类";
-            this.RoomName.Name = "RoomName";
+            this.floorNameDataGridViewTextBoxColumn.DataPropertyName = "FloorName";
+            this.floorNameDataGridViewTextBoxColumn.HeaderText = "所在楼层";
+            this.floorNameDataGridViewTextBoxColumn.Name = "floorNameDataGridViewTextBoxColumn";
             // 
-            // deviceInfoDataGridViewTextBoxColumn
+            // floorInfoDataGridViewTextBoxColumn
             // 
-            this.deviceInfoDataGridViewTextBoxColumn.DataPropertyName = "DeviceInfo";
-            this.deviceInfoDataGridViewTextBoxColumn.HeaderText = "设备详细信息";
-            this.deviceInfoDataGridViewTextBoxColumn.Name = "deviceInfoDataGridViewTextBoxColumn";
+            this.floorInfoDataGridViewTextBoxColumn.DataPropertyName = "FloorInfo";
+            this.floorInfoDataGridViewTextBoxColumn.HeaderText = "楼层信息";
+            this.floorInfoDataGridViewTextBoxColumn.Name = "floorInfoDataGridViewTextBoxColumn";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "DeviceInfo";
+            this.dataGridViewTextBoxColumn3.HeaderText = "详细信息";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // deviceInformationViewBindingSource
             // 
-            this.deviceInformationViewBindingSource.DataSource = typeof(智能平台总控端.Models.DeviceInformationView);
-            // 
-            // deviceBindingSource
-            // 
-            this.deviceBindingSource.DataSource = typeof(智能平台总控端.Models.Device);
+            this.deviceInformationViewBindingSource.DataSource = typeof(EasySmartDataBaseService.Models.DeviceInformationView);
             // 
             // Devicemanager
             // 
@@ -444,15 +428,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.Addbtn)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deviceInformationViewBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.deviceBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -465,12 +445,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox EditBtn;
         private System.Windows.Forms.PictureBox DeleteBtn;
@@ -486,13 +461,21 @@
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn deviceTypeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource deviceBindingSource;
-        private System.Windows.Forms.BindingSource deviceInformationViewBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn deviceIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deviceNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deviceAddressDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FloorName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RoomName;
         private System.Windows.Forms.DataGridViewTextBoxColumn deviceInfoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ListBox listBox4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn isAdminDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn floorNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn floorInfoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.BindingSource deviceInformationViewBindingSource;
     }
 }
