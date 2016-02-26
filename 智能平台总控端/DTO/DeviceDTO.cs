@@ -11,8 +11,7 @@ namespace 智能平台总控端.DTO
         public bool Device_Check { get; set; }
         public string DeviceName { get; set; }
         public string DeviceInfo { get; set; }
+
         public int DeviceID { get; set; }
-        public int RoomID { get; set; }
-        public List<PerformOrSensorDTO> psDTOList { get; set; }
     }
 }
