@@ -45,6 +45,11 @@ namespace 智能平台总控端
 
         private void OKbtn_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void OKbtn_Click_1(object sender, EventArgs e)
+        {
             if (!IsEdit)
             {
                 SensorService ss = new SensorService();
@@ -55,7 +60,7 @@ namespace 智能平台总控端
                 model.SensorCompiction = (decimal)numericUpDown3.Value;
                 model.SensorInfo = richTextBox1.Text.Trim();
                 model.SensorUnit = textBox1.Text.Trim();
-                ss.AddSensor(model,NowUser.CurrentUser);
+                ss.AddSensor(model, NowUser.CurrentUser);
             }
             else
             {
@@ -68,7 +73,7 @@ namespace 智能平台总控端
                 model.SensorCompiction = numericUpDown3.Value;
                 model.SensorInfo = richTextBox1.Text.Trim();
                 model.SensorUnit = textBox1.Text.Trim();
-                ss.Update(model,NowUser.CurrentUser);
+                ss.Update(model, NowUser.CurrentUser);
             }
             this.Close();
         }

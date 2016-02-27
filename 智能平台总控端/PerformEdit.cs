@@ -56,6 +56,7 @@ namespace 智能平台总控端
                 model.PerformUnit = textBox1.Text.Trim();
                 model.PerformMaxim = (int)Nummax.Value;
                 model.PerformMinum = (int)Nummin.Value;
+                model.DeviceID = DeviceID;
                 ss.AddPerform(model,NowUser.CurrentUser);
             }
             else
@@ -71,6 +72,7 @@ namespace 智能平台总控端
                 model.PerformUnit = textBox1.Text.Trim();
                 model.PerformMaxim = (int)Nummax.Value;
                 model.PerformMinum = (int)Nummin.Value;
+                model.DeviceID = DeviceID;
                 ss.Update(model,NowUser.CurrentUser);
             }
             this.Close();

@@ -169,9 +169,9 @@ namespace 智能平台总控端
         {
             //try
             //{
-            DeviceInformationView model = dataGridView1.SelectedRows[0].DataBoundItem as DeviceInformationView;
-            SensePerform sp = new SensePerform();
-            sp.Display(model.DeviceID);
+                DeviceInformationView model = dataGridView1.SelectedRows[0].DataBoundItem as DeviceInformationView;
+                SensePerform sp = new SensePerform();
+                sp.Display(model.DeviceID);
             //}
             //catch { }
         }
@@ -215,6 +215,11 @@ namespace 智能平台总控端
         private void button1_Click(object sender, EventArgs e)
         {
             GetDeviceData();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
