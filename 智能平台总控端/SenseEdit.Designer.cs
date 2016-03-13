@@ -45,18 +45,24 @@
             this.Nametext = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.MinUpdown = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.MaXUpDown = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Cancelbtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OKbtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinUpdown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaXUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(169, 245);
+            this.textBox1.Location = new System.Drawing.Point(169, 315);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(206, 26);
             this.textBox1.TabIndex = 113;
@@ -66,7 +72,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微软雅黑", 15.75F);
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(46, 242);
+            this.label7.Location = new System.Drawing.Point(46, 312);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(117, 28);
             this.label7.TabIndex = 112;
@@ -76,7 +82,7 @@
             // 
             this.numericUpDown3.DecimalPlaces = 8;
             this.numericUpDown3.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.numericUpDown3.Location = new System.Drawing.Point(169, 210);
+            this.numericUpDown3.Location = new System.Drawing.Point(169, 280);
             this.numericUpDown3.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -92,7 +98,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 15.75F);
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(46, 207);
+            this.label6.Location = new System.Drawing.Point(46, 277);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(117, 28);
             this.label6.TabIndex = 110;
@@ -126,7 +132,7 @@
             // richTextBox1
             // 
             this.richTextBox1.Font = new System.Drawing.Font("宋体", 10.5F);
-            this.richTextBox1.Location = new System.Drawing.Point(169, 277);
+            this.richTextBox1.Location = new System.Drawing.Point(169, 347);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(206, 160);
             this.richTextBox1.TabIndex = 107;
@@ -166,7 +172,7 @@
             // 
             this.Cancelbtn.Image = ((System.Drawing.Image)(resources.GetObject("Cancelbtn.Image")));
             this.Cancelbtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Cancelbtn.Location = new System.Drawing.Point(295, 446);
+            this.Cancelbtn.Location = new System.Drawing.Point(295, 516);
             this.Cancelbtn.Name = "Cancelbtn";
             this.Cancelbtn.Size = new System.Drawing.Size(80, 74);
             this.Cancelbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -188,7 +194,7 @@
             // 
             this.OKbtn.Image = ((System.Drawing.Image)(resources.GetObject("OKbtn.Image")));
             this.OKbtn.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.OKbtn.Location = new System.Drawing.Point(50, 446);
+            this.OKbtn.Location = new System.Drawing.Point(50, 516);
             this.OKbtn.Name = "OKbtn";
             this.OKbtn.Size = new System.Drawing.Size(80, 74);
             this.OKbtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -201,7 +207,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 15.75F);
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(47, 277);
+            this.label4.Location = new System.Drawing.Point(47, 347);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 28);
             this.label4.TabIndex = 101;
@@ -237,12 +243,76 @@
             this.label1.TabIndex = 98;
             this.label1.Text = "填写传感器信息";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("微软雅黑", 15.75F);
+            this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label8.Location = new System.Drawing.Point(46, 207);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 28);
+            this.label8.TabIndex = 114;
+            this.label8.Text = "最大值：";
+            // 
+            // MinUpdown
+            // 
+            this.MinUpdown.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.MinUpdown.Location = new System.Drawing.Point(169, 245);
+            this.MinUpdown.Maximum = new decimal(new int[] {
+            -2147483648,
+            0,
+            0,
+            0});
+            this.MinUpdown.Minimum = new decimal(new int[] {
+            -2147483648,
+            0,
+            0,
+            -2147483648});
+            this.MinUpdown.Name = "MinUpdown";
+            this.MinUpdown.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MinUpdown.Size = new System.Drawing.Size(206, 29);
+            this.MinUpdown.TabIndex = 117;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("微软雅黑", 15.75F);
+            this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label9.Location = new System.Drawing.Point(46, 242);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(96, 28);
+            this.label9.TabIndex = 116;
+            this.label9.Text = "最小值：";
+            // 
+            // MaXUpDown
+            // 
+            this.MaXUpDown.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.MaXUpDown.Location = new System.Drawing.Point(169, 210);
+            this.MaXUpDown.Maximum = new decimal(new int[] {
+            -2147483648,
+            0,
+            0,
+            0});
+            this.MaXUpDown.Minimum = new decimal(new int[] {
+            -2147483648,
+            0,
+            0,
+            -2147483648});
+            this.MaXUpDown.Name = "MaXUpDown";
+            this.MaXUpDown.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.MaXUpDown.Size = new System.Drawing.Size(206, 29);
+            this.MaXUpDown.TabIndex = 118;
+            // 
             // SenseEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(430, 526);
+            this.ClientSize = new System.Drawing.Size(430, 618);
+            this.Controls.Add(this.MaXUpDown);
+            this.Controls.Add(this.MinUpdown);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.numericUpDown3);
@@ -267,6 +337,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Cancelbtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OKbtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MinUpdown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MaXUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,6 +362,10 @@
         private System.Windows.Forms.TextBox Nametext;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.NumericUpDown MinUpdown;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.NumericUpDown MaXUpDown;
 
     }
 }

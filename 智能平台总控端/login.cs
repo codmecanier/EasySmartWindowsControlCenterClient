@@ -1,4 +1,5 @@
 ﻿using EasySmartDataBaseService.Models;
+using EasySmartDataBaseService.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,7 +27,8 @@ namespace 智能平台总控端
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Home.services.LoadAllServices();
-            User user=Home.services.userservice.Login(comboBox1.Text, textBox2.Text);
+            UserService uss = new UserService();
+            User user=uss.Login(comboBox1.Text, textBox2.Text);
             if (null != user)
             {
                 PersonalSettings ps = setting.Where<PersonalSettings>(P => P.Username == comboBox1.Text.Trim()).FirstOrDefault<PersonalSettings>();

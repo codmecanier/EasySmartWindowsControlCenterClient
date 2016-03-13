@@ -35,6 +35,8 @@ namespace 智能平台总控端
                 numericUpDown2.Value = model.SensorBase;
                 textBox1.Text = model.SensorUnit;
                 richTextBox1.Text = model.SensorInfo;
+                MaXUpDown.Value = model.SensorMaxim;
+                MinUpdown.Value = model.SensorMinim;
             }
         }
 
@@ -58,6 +60,8 @@ namespace 智能平台总控端
                 model.SensorBase = (decimal)numericUpDown2.Value;
                 model.SenserAddress = (int)numericUpDown1.Value;
                 model.SensorCompiction = (decimal)numericUpDown3.Value;
+                model.SensorMaxim = MaXUpDown.Value;
+                model.SensorMinim = MinUpdown.Value;
                 model.SensorInfo = richTextBox1.Text.Trim();
                 model.SensorUnit = textBox1.Text.Trim();
                 model.DeviceID = DeviceID;
@@ -71,6 +75,8 @@ namespace 智能平台总控端
                 model.SenseName = Nametext.Text.Trim();
                 model.SensorBase = numericUpDown2.Value;
                 model.SenserAddress = (int)numericUpDown1.Value;
+                model.SensorMaxim = MaXUpDown.Value;
+                model.SensorMinim = MinUpdown.Value;
                 model.SensorCompiction = numericUpDown3.Value;
                 model.SensorInfo = richTextBox1.Text.Trim();
                 model.SensorUnit = textBox1.Text.Trim();

@@ -36,7 +36,6 @@ namespace 智能平台总控端
             gb.Controls.Add(lb);
             gb.Controls.Add(pb);
             gb.Controls.Add(tb);
-            gb.Name = model.SenseID.ToString();
             gb.Size = new System.Drawing.Size(474, 93);
             gb.Text = model.SenseName;
             lb.Location = new System.Drawing.Point(13, 40);
@@ -47,10 +46,12 @@ namespace 智能平台总控端
             pb.Maximum = (int)model.SensorMaxim;
             pb.Minimum = (int)model.SensorMinim;
             pb.Value = (int)model.SensorOutPut;
+            pb.Name = model.SenseID.ToString();
             tb.Location = new System.Drawing.Point(292, 37);
             tb.Size = new System.Drawing.Size(176, 33);
             tb.Text = model.SensorOutPut.ToString();
             tb.Text += model.SensorUnit;
+            tb.Name = model.SenseID.ToString();
             return gb;
         }
         private GroupBox NewPerformController(DevicePerformView model)
@@ -95,6 +96,20 @@ namespace 智能平台总控端
             {
                 GroupBox box = NewSensorController(models);
                 flowLayoutPanel1.Controls.Add(box);
+            }
+
+        }
+        private void RefreshSensor()
+        {
+            SensorService model = new SensorService();
+            IEnumerable<DeviceSensorView> list = model.GetByCondiction(P => P.DeviceID == DeviceID, NowUser.CurrentUser);
+            foreach (GroupBox gb in flowLayoutPanel1.Controls)
+            {
+                TextBox tb = gb.Controls[2] as TextBox;
+                ProgressBar pb = gb.Controls[1] as ProgressBar;
+                DeviceSensorView m = list.FirstOrDefault<DeviceSensorView>(P => P.SenseID == int.Parse(tb.Name));
+                tb.Text = m.SensorOutPut.ToString() + m.SensorUnit;
+                pb.Value = (int)m.SensorOutPut;
             }
 
         }
@@ -147,6 +162,16 @@ namespace 智能平台总控端
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RefreshSensor();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            RefreshSensor();
         }
     }
 }

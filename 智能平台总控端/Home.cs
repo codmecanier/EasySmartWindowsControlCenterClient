@@ -137,5 +137,10 @@ namespace 智能平台总控端
             ds.ShowDialog();
         }
 
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 }

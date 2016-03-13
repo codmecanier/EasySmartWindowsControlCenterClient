@@ -39,11 +39,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureButton7 = new 智能平台总控端.PictureButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureButton1 = new 智能平台总控端.PictureButton();
             this.pictureButton5 = new 智能平台总控端.PictureButton();
             this.pictureButton4 = new 智能平台总控端.PictureButton();
@@ -52,16 +51,17 @@
             this.pictureButton6 = new 智能平台总控端.PictureButton();
             this.pictureButton8 = new 智能平台总控端.PictureButton();
             this.pictureButton9 = new 智能平台总控端.PictureButton();
+            this.pictureButton7 = new 智能平台总控端.PictureButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -77,8 +77,9 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1281, 880);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1281, 733);
             this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // tableLayoutPanel2
             // 
@@ -93,18 +94,18 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.7935F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.2065F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(823, 870);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(823, 723);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.flowLayoutPanel1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(4, 168);
+            this.groupBox1.Location = new System.Drawing.Point(4, 140);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(815, 697);
+            this.groupBox1.Size = new System.Drawing.Size(815, 578);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "最近设备、情景模式";
@@ -112,10 +113,10 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 54);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 33);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(807, 638);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(807, 540);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panel2
@@ -125,7 +126,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(817, 157);
+            this.panel2.Size = new System.Drawing.Size(817, 129);
             this.panel2.TabIndex = 1;
             // 
             // label1
@@ -134,7 +135,7 @@
             this.label1.Location = new System.Drawing.Point(275, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(542, 157);
+            this.label1.Size = new System.Drawing.Size(542, 129);
             this.label1.TabIndex = 1;
             this.label1.Text = "EasySmart智能设备总控软件";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -146,7 +147,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(275, 157);
+            this.panel3.Size = new System.Drawing.Size(275, 129);
             this.panel3.TabIndex = 0;
             // 
             // panel4
@@ -156,7 +157,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(112, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(163, 157);
+            this.panel4.Size = new System.Drawing.Size(163, 129);
             this.panel4.TabIndex = 1;
             // 
             // label3
@@ -164,7 +165,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(21, 50);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 48);
+            this.label3.Size = new System.Drawing.Size(75, 28);
             this.label3.TabIndex = 2;
             this.label3.Text = "无消息";
             // 
@@ -173,9 +174,22 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(21, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(206, 48);
+            this.label2.Size = new System.Drawing.Size(119, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "UserName";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = global::智能平台总控端.Properties.Resources._1095979;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.pictureBox1.Size = new System.Drawing.Size(112, 129);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.SizeChanged += new System.EventHandler(this.pictureBox1_SizeChanged);
             // 
             // groupBox2
             // 
@@ -185,7 +199,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox2.Size = new System.Drawing.Size(442, 870);
+            this.groupBox2.Size = new System.Drawing.Size(442, 723);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "其他功能";
@@ -194,10 +208,10 @@
             // 
             this.panel1.Controls.Add(this.tableLayoutPanel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(4, 54);
+            this.panel1.Location = new System.Drawing.Point(4, 33);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(434, 811);
+            this.panel1.Size = new System.Drawing.Size(434, 685);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel3
@@ -224,40 +238,8 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(434, 811);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(434, 685);
             this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // pictureButton7
-            // 
-            this.pictureButton7.BackGroundImage = null;
-            this.pictureButton7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureButton7.Forecolor = System.Drawing.SystemColors.ControlText;
-            this.pictureButton7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.pictureButton7.LabelText = "按钮";
-            this.pictureButton7.Location = new System.Drawing.Point(148, 545);
-            this.pictureButton7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureButton7.MoveInImage = null;
-            this.pictureButton7.Name = "pictureButton7";
-            this.pictureButton7.PressingImage = null;
-            this.pictureButton7.Size = new System.Drawing.Size(136, 261);
-            this.pictureButton7.TabIndex = 10;
-            this.pictureButton7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
-            this.pictureButton7.MouseEnter += new System.EventHandler(this.pictureButton2_MouseEnter);
-            this.pictureButton7.MouseLeave += new System.EventHandler(this.pictureButton2_MouseLeave);
-            this.pictureButton7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseUp);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = global::智能平台总控端.Properties.Resources._1095979;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.pictureBox1.Size = new System.Drawing.Size(112, 157);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.SizeChanged += new System.EventHandler(this.pictureBox1_SizeChanged);
             // 
             // pictureButton1
             // 
@@ -270,7 +252,7 @@
             this.pictureButton1.MoveInImage = null;
             this.pictureButton1.Name = "pictureButton1";
             this.pictureButton1.PressingImage = null;
-            this.pictureButton1.Size = new System.Drawing.Size(130, 256);
+            this.pictureButton1.Size = new System.Drawing.Size(130, 214);
             this.pictureButton1.TabIndex = 6;
             this.pictureButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
             this.pictureButton1.MouseEnter += new System.EventHandler(this.pictureButton2_MouseEnter);
@@ -283,12 +265,12 @@
             this.pictureButton5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureButton5.Forecolor = System.Drawing.SystemColors.ControlText;
             this.pictureButton5.LabelText = "用户权限";
-            this.pictureButton5.Location = new System.Drawing.Point(7, 547);
+            this.pictureButton5.Location = new System.Drawing.Point(7, 463);
             this.pictureButton5.Margin = new System.Windows.Forms.Padding(7);
             this.pictureButton5.MoveInImage = null;
             this.pictureButton5.Name = "pictureButton5";
             this.pictureButton5.PressingImage = null;
-            this.pictureButton5.Size = new System.Drawing.Size(130, 257);
+            this.pictureButton5.Size = new System.Drawing.Size(130, 215);
             this.pictureButton5.TabIndex = 4;
             this.pictureButton5.Load += new System.EventHandler(this.pictureButton5_Load);
             this.pictureButton5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
@@ -302,12 +284,12 @@
             this.pictureButton4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureButton4.Forecolor = System.Drawing.SystemColors.ControlText;
             this.pictureButton4.LabelText = "分类";
-            this.pictureButton4.Location = new System.Drawing.Point(151, 277);
+            this.pictureButton4.Location = new System.Drawing.Point(151, 235);
             this.pictureButton4.Margin = new System.Windows.Forms.Padding(7);
             this.pictureButton4.MoveInImage = null;
             this.pictureButton4.Name = "pictureButton4";
             this.pictureButton4.PressingImage = null;
-            this.pictureButton4.Size = new System.Drawing.Size(130, 256);
+            this.pictureButton4.Size = new System.Drawing.Size(130, 214);
             this.pictureButton4.TabIndex = 3;
             this.pictureButton4.Load += new System.EventHandler(this.pictureButton4_Load);
             this.pictureButton4.Click += new System.EventHandler(this.pictureButton4_Click);
@@ -322,12 +304,12 @@
             this.pictureButton3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureButton3.Forecolor = System.Drawing.SystemColors.ControlText;
             this.pictureButton3.LabelText = "设备";
-            this.pictureButton3.Location = new System.Drawing.Point(7, 277);
+            this.pictureButton3.Location = new System.Drawing.Point(7, 235);
             this.pictureButton3.Margin = new System.Windows.Forms.Padding(7);
             this.pictureButton3.MoveInImage = null;
             this.pictureButton3.Name = "pictureButton3";
             this.pictureButton3.PressingImage = null;
-            this.pictureButton3.Size = new System.Drawing.Size(130, 256);
+            this.pictureButton3.Size = new System.Drawing.Size(130, 214);
             this.pictureButton3.TabIndex = 2;
             this.pictureButton3.Load += new System.EventHandler(this.pictureButton3_Load);
             this.pictureButton3.Click += new System.EventHandler(this.pictureButton3_Click);
@@ -347,7 +329,7 @@
             this.pictureButton2.MoveInImage = null;
             this.pictureButton2.Name = "pictureButton2";
             this.pictureButton2.PressingImage = null;
-            this.pictureButton2.Size = new System.Drawing.Size(130, 256);
+            this.pictureButton2.Size = new System.Drawing.Size(130, 214);
             this.pictureButton2.TabIndex = 1;
             this.pictureButton2.Load += new System.EventHandler(this.pictureButton2_Load);
             this.pictureButton2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
@@ -361,12 +343,12 @@
             this.pictureButton6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureButton6.Forecolor = System.Drawing.SystemColors.ControlText;
             this.pictureButton6.LabelText = "退出";
-            this.pictureButton6.Location = new System.Drawing.Point(295, 547);
+            this.pictureButton6.Location = new System.Drawing.Point(295, 463);
             this.pictureButton6.Margin = new System.Windows.Forms.Padding(7);
             this.pictureButton6.MoveInImage = null;
             this.pictureButton6.Name = "pictureButton6";
             this.pictureButton6.PressingImage = null;
-            this.pictureButton6.Size = new System.Drawing.Size(132, 257);
+            this.pictureButton6.Size = new System.Drawing.Size(132, 215);
             this.pictureButton6.TabIndex = 5;
             this.pictureButton6.Click += new System.EventHandler(this.pictureButton6_Click);
             this.pictureButton6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
@@ -386,7 +368,7 @@
             this.pictureButton8.Name = "pictureButton8";
             this.pictureButton8.Padding = new System.Windows.Forms.Padding(10);
             this.pictureButton8.PressingImage = null;
-            this.pictureButton8.Size = new System.Drawing.Size(138, 260);
+            this.pictureButton8.Size = new System.Drawing.Size(138, 218);
             this.pictureButton8.TabIndex = 8;
             this.pictureButton8.Load += new System.EventHandler(this.pictureButton8_Load);
             this.pictureButton8.Click += new System.EventHandler(this.pictureButton8_Click);
@@ -401,13 +383,13 @@
             this.pictureButton9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureButton9.Forecolor = System.Drawing.SystemColors.ControlText;
             this.pictureButton9.LabelText = "搜索设备";
-            this.pictureButton9.Location = new System.Drawing.Point(292, 275);
+            this.pictureButton9.Location = new System.Drawing.Point(292, 233);
             this.pictureButton9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureButton9.MoveInImage = null;
             this.pictureButton9.Name = "pictureButton9";
             this.pictureButton9.Padding = new System.Windows.Forms.Padding(10);
             this.pictureButton9.PressingImage = null;
-            this.pictureButton9.Size = new System.Drawing.Size(138, 260);
+            this.pictureButton9.Size = new System.Drawing.Size(138, 218);
             this.pictureButton9.TabIndex = 9;
             this.pictureButton9.Click += new System.EventHandler(this.pictureButton9_Click_1);
             this.pictureButton9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
@@ -415,12 +397,31 @@
             this.pictureButton9.MouseLeave += new System.EventHandler(this.pictureButton2_MouseLeave);
             this.pictureButton9.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseUp);
             // 
+            // pictureButton7
+            // 
+            this.pictureButton7.BackGroundImage = null;
+            this.pictureButton7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureButton7.Forecolor = System.Drawing.SystemColors.ControlText;
+            this.pictureButton7.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.pictureButton7.LabelText = "按钮";
+            this.pictureButton7.Location = new System.Drawing.Point(148, 461);
+            this.pictureButton7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureButton7.MoveInImage = null;
+            this.pictureButton7.Name = "pictureButton7";
+            this.pictureButton7.PressingImage = null;
+            this.pictureButton7.Size = new System.Drawing.Size(136, 219);
+            this.pictureButton7.TabIndex = 10;
+            this.pictureButton7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
+            this.pictureButton7.MouseEnter += new System.EventHandler(this.pictureButton2_MouseEnter);
+            this.pictureButton7.MouseLeave += new System.EventHandler(this.pictureButton2_MouseLeave);
+            this.pictureButton7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseUp);
+            // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 48F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1281, 880);
+            this.ClientSize = new System.Drawing.Size(1281, 733);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(6);
@@ -436,10 +437,10 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace 智能平台总控端
 {
-    public partial class NowUser
+    public class NowUser
     {
         public static User CurrentUser { get; set; }
         public FloorService floorservice { get; set; }
