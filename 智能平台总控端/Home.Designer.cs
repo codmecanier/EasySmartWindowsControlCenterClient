@@ -43,15 +43,33 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureButton1 = new 智能平台总控端.PictureButton();
-            this.pictureButton5 = new 智能平台总控端.PictureButton();
-            this.pictureButton4 = new 智能平台总控端.PictureButton();
-            this.pictureButton3 = new 智能平台总控端.PictureButton();
-            this.pictureButton2 = new 智能平台总控端.PictureButton();
-            this.pictureButton6 = new 智能平台总控端.PictureButton();
-            this.pictureButton8 = new 智能平台总控端.PictureButton();
-            this.pictureButton9 = new 智能平台总控端.PictureButton();
-            this.pictureButton7 = new 智能平台总控端.PictureButton();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -62,6 +80,24 @@
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.tableLayoutPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.tableLayoutPanel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.tableLayoutPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.tableLayoutPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -116,6 +152,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 33);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Padding = new System.Windows.Forms.Padding(20);
             this.flowLayoutPanel1.Size = new System.Drawing.Size(807, 540);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
@@ -220,15 +257,15 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Controls.Add(this.pictureButton1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.pictureButton5, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.pictureButton4, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.pictureButton3, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.pictureButton2, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.pictureButton6, 2, 2);
-            this.tableLayoutPanel3.Controls.Add(this.pictureButton8, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.pictureButton9, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.pictureButton7, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel12, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel11, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel10, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel9, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel8, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel7, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel5, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel4, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -241,180 +278,375 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(434, 685);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
-            // pictureButton1
+            // tableLayoutPanel12
             // 
-            this.pictureButton1.BackGroundImage = ((System.Drawing.Image)(resources.GetObject("pictureButton1.BackGroundImage")));
-            this.pictureButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureButton1.Forecolor = System.Drawing.SystemColors.ControlText;
-            this.pictureButton1.LabelText = "情景模式";
-            this.pictureButton1.Location = new System.Drawing.Point(7, 7);
-            this.pictureButton1.Margin = new System.Windows.Forms.Padding(7);
-            this.pictureButton1.MoveInImage = null;
-            this.pictureButton1.Name = "pictureButton1";
-            this.pictureButton1.PressingImage = null;
-            this.pictureButton1.Size = new System.Drawing.Size(130, 214);
-            this.pictureButton1.TabIndex = 6;
-            this.pictureButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
-            this.pictureButton1.MouseEnter += new System.EventHandler(this.pictureButton2_MouseEnter);
-            this.pictureButton1.MouseLeave += new System.EventHandler(this.pictureButton2_MouseLeave);
-            this.pictureButton1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseUp);
+            this.tableLayoutPanel12.ColumnCount = 1;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel12.Controls.Add(this.pictureBox10, 0, 0);
+            this.tableLayoutPanel12.Controls.Add(this.label12, 0, 1);
+            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(291, 459);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 2;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(140, 223);
+            this.tableLayoutPanel12.TabIndex = 8;
             // 
-            // pictureButton5
+            // pictureBox10
             // 
-            this.pictureButton5.BackGroundImage = ((System.Drawing.Image)(resources.GetObject("pictureButton5.BackGroundImage")));
-            this.pictureButton5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureButton5.Forecolor = System.Drawing.SystemColors.ControlText;
-            this.pictureButton5.LabelText = "用户权限";
-            this.pictureButton5.Location = new System.Drawing.Point(7, 463);
-            this.pictureButton5.Margin = new System.Windows.Forms.Padding(7);
-            this.pictureButton5.MoveInImage = null;
-            this.pictureButton5.Name = "pictureButton5";
-            this.pictureButton5.PressingImage = null;
-            this.pictureButton5.Size = new System.Drawing.Size(130, 215);
-            this.pictureButton5.TabIndex = 4;
-            this.pictureButton5.Load += new System.EventHandler(this.pictureButton5_Load);
-            this.pictureButton5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
-            this.pictureButton5.MouseEnter += new System.EventHandler(this.pictureButton2_MouseEnter);
-            this.pictureButton5.MouseLeave += new System.EventHandler(this.pictureButton2_MouseLeave);
-            this.pictureButton5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseUp);
+            this.pictureBox10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Padding = new System.Windows.Forms.Padding(20);
+            this.pictureBox10.Size = new System.Drawing.Size(134, 153);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 0;
+            this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+            this.pictureBox10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox10.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.pictureBox10.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox10.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
             // 
-            // pictureButton4
+            // label12
             // 
-            this.pictureButton4.BackGroundImage = ((System.Drawing.Image)(resources.GetObject("pictureButton4.BackGroundImage")));
-            this.pictureButton4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureButton4.Forecolor = System.Drawing.SystemColors.ControlText;
-            this.pictureButton4.LabelText = "分类";
-            this.pictureButton4.Location = new System.Drawing.Point(151, 235);
-            this.pictureButton4.Margin = new System.Windows.Forms.Padding(7);
-            this.pictureButton4.MoveInImage = null;
-            this.pictureButton4.Name = "pictureButton4";
-            this.pictureButton4.PressingImage = null;
-            this.pictureButton4.Size = new System.Drawing.Size(130, 214);
-            this.pictureButton4.TabIndex = 3;
-            this.pictureButton4.Load += new System.EventHandler(this.pictureButton4_Load);
-            this.pictureButton4.Click += new System.EventHandler(this.pictureButton4_Click);
-            this.pictureButton4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
-            this.pictureButton4.MouseEnter += new System.EventHandler(this.pictureButton2_MouseEnter);
-            this.pictureButton4.MouseLeave += new System.EventHandler(this.pictureButton2_MouseLeave);
-            this.pictureButton4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseUp);
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Location = new System.Drawing.Point(3, 159);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(134, 64);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "退出";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureButton3
+            // tableLayoutPanel11
             // 
-            this.pictureButton3.BackGroundImage = ((System.Drawing.Image)(resources.GetObject("pictureButton3.BackGroundImage")));
-            this.pictureButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureButton3.Forecolor = System.Drawing.SystemColors.ControlText;
-            this.pictureButton3.LabelText = "设备";
-            this.pictureButton3.Location = new System.Drawing.Point(7, 235);
-            this.pictureButton3.Margin = new System.Windows.Forms.Padding(7);
-            this.pictureButton3.MoveInImage = null;
-            this.pictureButton3.Name = "pictureButton3";
-            this.pictureButton3.PressingImage = null;
-            this.pictureButton3.Size = new System.Drawing.Size(130, 214);
-            this.pictureButton3.TabIndex = 2;
-            this.pictureButton3.Load += new System.EventHandler(this.pictureButton3_Load);
-            this.pictureButton3.Click += new System.EventHandler(this.pictureButton3_Click);
-            this.pictureButton3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
-            this.pictureButton3.MouseEnter += new System.EventHandler(this.pictureButton2_MouseEnter);
-            this.pictureButton3.MouseLeave += new System.EventHandler(this.pictureButton2_MouseLeave);
-            this.pictureButton3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseUp);
+            this.tableLayoutPanel11.ColumnCount = 1;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel11.Controls.Add(this.pictureBox9, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.label11, 0, 1);
+            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(147, 459);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 2;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(138, 223);
+            this.tableLayoutPanel11.TabIndex = 7;
             // 
-            // pictureButton2
+            // pictureBox9
             // 
-            this.pictureButton2.BackGroundImage = ((System.Drawing.Image)(resources.GetObject("pictureButton2.BackGroundImage")));
-            this.pictureButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureButton2.Forecolor = System.Drawing.SystemColors.ControlText;
-            this.pictureButton2.LabelText = "定时任务";
-            this.pictureButton2.Location = new System.Drawing.Point(151, 7);
-            this.pictureButton2.Margin = new System.Windows.Forms.Padding(7);
-            this.pictureButton2.MoveInImage = null;
-            this.pictureButton2.Name = "pictureButton2";
-            this.pictureButton2.PressingImage = null;
-            this.pictureButton2.Size = new System.Drawing.Size(130, 214);
-            this.pictureButton2.TabIndex = 1;
-            this.pictureButton2.Load += new System.EventHandler(this.pictureButton2_Load);
-            this.pictureButton2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
-            this.pictureButton2.MouseEnter += new System.EventHandler(this.pictureButton2_MouseEnter);
-            this.pictureButton2.MouseLeave += new System.EventHandler(this.pictureButton2_MouseLeave);
-            this.pictureButton2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseUp);
+            this.pictureBox9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Padding = new System.Windows.Forms.Padding(20);
+            this.pictureBox9.Size = new System.Drawing.Size(132, 153);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 0;
+            this.pictureBox9.TabStop = false;
+            this.pictureBox9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox9.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.pictureBox9.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox9.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
             // 
-            // pictureButton6
+            // label11
             // 
-            this.pictureButton6.BackGroundImage = ((System.Drawing.Image)(resources.GetObject("pictureButton6.BackGroundImage")));
-            this.pictureButton6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureButton6.Forecolor = System.Drawing.SystemColors.ControlText;
-            this.pictureButton6.LabelText = "退出";
-            this.pictureButton6.Location = new System.Drawing.Point(295, 463);
-            this.pictureButton6.Margin = new System.Windows.Forms.Padding(7);
-            this.pictureButton6.MoveInImage = null;
-            this.pictureButton6.Name = "pictureButton6";
-            this.pictureButton6.PressingImage = null;
-            this.pictureButton6.Size = new System.Drawing.Size(132, 215);
-            this.pictureButton6.TabIndex = 5;
-            this.pictureButton6.Click += new System.EventHandler(this.pictureButton6_Click);
-            this.pictureButton6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
-            this.pictureButton6.MouseEnter += new System.EventHandler(this.pictureButton2_MouseEnter);
-            this.pictureButton6.MouseLeave += new System.EventHandler(this.pictureButton2_MouseLeave);
-            this.pictureButton6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseUp);
+            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Location = new System.Drawing.Point(3, 159);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(132, 64);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "用户权限";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureButton8
+            // tableLayoutPanel10
             // 
-            this.pictureButton8.BackGroundImage = ((System.Drawing.Image)(resources.GetObject("pictureButton8.BackGroundImage")));
-            this.pictureButton8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureButton8.Forecolor = System.Drawing.SystemColors.ControlText;
-            this.pictureButton8.LabelText = "选择设备";
-            this.pictureButton8.Location = new System.Drawing.Point(292, 5);
-            this.pictureButton8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureButton8.MoveInImage = null;
-            this.pictureButton8.Name = "pictureButton8";
-            this.pictureButton8.Padding = new System.Windows.Forms.Padding(10);
-            this.pictureButton8.PressingImage = null;
-            this.pictureButton8.Size = new System.Drawing.Size(138, 218);
-            this.pictureButton8.TabIndex = 8;
-            this.pictureButton8.Load += new System.EventHandler(this.pictureButton8_Load);
-            this.pictureButton8.Click += new System.EventHandler(this.pictureButton8_Click);
-            this.pictureButton8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
-            this.pictureButton8.MouseEnter += new System.EventHandler(this.pictureButton2_MouseEnter);
-            this.pictureButton8.MouseLeave += new System.EventHandler(this.pictureButton2_MouseLeave);
-            this.pictureButton8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseUp);
+            this.tableLayoutPanel10.ColumnCount = 1;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Controls.Add(this.pictureBox8, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.label10, 0, 1);
+            this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 459);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 2;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(138, 223);
+            this.tableLayoutPanel10.TabIndex = 6;
             // 
-            // pictureButton9
+            // pictureBox8
             // 
-            this.pictureButton9.BackGroundImage = ((System.Drawing.Image)(resources.GetObject("pictureButton9.BackGroundImage")));
-            this.pictureButton9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureButton9.Forecolor = System.Drawing.SystemColors.ControlText;
-            this.pictureButton9.LabelText = "搜索设备";
-            this.pictureButton9.Location = new System.Drawing.Point(292, 233);
-            this.pictureButton9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureButton9.MoveInImage = null;
-            this.pictureButton9.Name = "pictureButton9";
-            this.pictureButton9.Padding = new System.Windows.Forms.Padding(10);
-            this.pictureButton9.PressingImage = null;
-            this.pictureButton9.Size = new System.Drawing.Size(138, 218);
-            this.pictureButton9.TabIndex = 9;
-            this.pictureButton9.Click += new System.EventHandler(this.pictureButton9_Click_1);
-            this.pictureButton9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
-            this.pictureButton9.MouseEnter += new System.EventHandler(this.pictureButton2_MouseEnter);
-            this.pictureButton9.MouseLeave += new System.EventHandler(this.pictureButton2_MouseLeave);
-            this.pictureButton9.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseUp);
+            this.pictureBox8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Padding = new System.Windows.Forms.Padding(20);
+            this.pictureBox8.Size = new System.Drawing.Size(132, 153);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox8.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.pictureBox8.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
             // 
-            // pictureButton7
+            // label10
             // 
-            this.pictureButton7.BackGroundImage = null;
-            this.pictureButton7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureButton7.Forecolor = System.Drawing.SystemColors.ControlText;
-            this.pictureButton7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.pictureButton7.LabelText = "按钮";
-            this.pictureButton7.Location = new System.Drawing.Point(148, 461);
-            this.pictureButton7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureButton7.MoveInImage = null;
-            this.pictureButton7.Name = "pictureButton7";
-            this.pictureButton7.PressingImage = null;
-            this.pictureButton7.Size = new System.Drawing.Size(136, 219);
-            this.pictureButton7.TabIndex = 10;
-            this.pictureButton7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseDown);
-            this.pictureButton7.MouseEnter += new System.EventHandler(this.pictureButton2_MouseEnter);
-            this.pictureButton7.MouseLeave += new System.EventHandler(this.pictureButton2_MouseLeave);
-            this.pictureButton7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureButton2_MouseUp);
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Location = new System.Drawing.Point(3, 159);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(132, 64);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "界面设计器";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 1;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel9.Controls.Add(this.pictureBox7, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.label9, 0, 1);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(291, 231);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 2;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(140, 222);
+            this.tableLayoutPanel9.TabIndex = 5;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Padding = new System.Windows.Forms.Padding(20);
+            this.pictureBox7.Size = new System.Drawing.Size(134, 152);
+            this.pictureBox7.TabIndex = 0;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox7.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.pictureBox7.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
+            // 
+            // label9
+            // 
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Location = new System.Drawing.Point(3, 158);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(134, 64);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "账号管理";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 1;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel8.Controls.Add(this.pictureBox6, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.label8, 0, 1);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(147, 231);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 2;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(138, 222);
+            this.tableLayoutPanel8.TabIndex = 4;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Padding = new System.Windows.Forms.Padding(20);
+            this.pictureBox6.Size = new System.Drawing.Size(132, 152);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.pictureBox6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox6.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.pictureBox6.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
+            // 
+            // label8
+            // 
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Location = new System.Drawing.Point(3, 158);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(132, 64);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "分类";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 1;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Controls.Add(this.pictureBox5, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.label7, 0, 1);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 231);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 2;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(138, 222);
+            this.tableLayoutPanel7.TabIndex = 3;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Padding = new System.Windows.Forms.Padding(20);
+            this.pictureBox5.Size = new System.Drawing.Size(132, 152);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.pictureBox5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox5.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.pictureBox5.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
+            // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Location = new System.Drawing.Point(3, 158);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(132, 64);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "设备";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.Controls.Add(this.pictureBox4, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label6, 0, 1);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(291, 3);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(140, 222);
+            this.tableLayoutPanel6.TabIndex = 2;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Padding = new System.Windows.Forms.Padding(20);
+            this.pictureBox4.Size = new System.Drawing.Size(134, 152);
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox4.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.pictureBox4.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
+            // 
+            // label6
+            // 
+            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label6.Location = new System.Drawing.Point(3, 158);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(134, 64);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "最近设备";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.pictureBox3, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label5, 0, 1);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(147, 3);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(138, 222);
+            this.tableLayoutPanel5.TabIndex = 1;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Padding = new System.Windows.Forms.Padding(20);
+            this.pictureBox3.Size = new System.Drawing.Size(132, 152);
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox3.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.pictureBox3.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Location = new System.Drawing.Point(3, 158);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(132, 64);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "情景模式";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Controls.Add(this.pictureBox2, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.label4, 0, 1);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(138, 222);
+            this.tableLayoutPanel4.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Padding = new System.Windows.Forms.Padding(20);
+            this.pictureBox2.Size = new System.Drawing.Size(132, 152);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseDown);
+            this.pictureBox2.MouseEnter += new System.EventHandler(this.pictureBox2_MouseEnter);
+            this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
+            this.pictureBox2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseUp);
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Location = new System.Drawing.Point(3, 158);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 64);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "选择设备";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Home
             // 
@@ -441,6 +673,24 @@
             this.groupBox2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel12.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.tableLayoutPanel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.tableLayoutPanel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.tableLayoutPanel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.tableLayoutPanel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -455,21 +705,39 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private PictureButton pictureButton1;
-        private PictureButton pictureButton6;
-        private PictureButton pictureButton5;
-        private PictureButton pictureButton4;
-        private PictureButton pictureButton3;
-        private PictureButton pictureButton2;
-        private PictureButton pictureButton8;
-        private PictureButton pictureButton9;
-        private PictureButton pictureButton7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
 
     }
 }

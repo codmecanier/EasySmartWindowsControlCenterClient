@@ -123,12 +123,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlDataBinding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlDataBinding.Designer.cs">
+      <DependentUpon>ControlDataBinding.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlPanelEditor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ControlPanelEditor.Designer.cs">
       <DependentUpon>ControlPanelEditor.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlSertialzer.cs" />
     <Compile Include="DeviceControler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,9 +185,11 @@
     <Compile Include="login.Designer.cs">
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyControls\MyAGauge.cs" />
+    <Compile Include="MyControls\MyLabel.cs" />
+    <Compile Include="MyControls\MyNumericUpDown.cs" />
+    <Compile Include="MyControls\MyPictureBox.cs" />
     <Compile Include="NowUser.cs" />
-    <Compile Include="ObjectBytes.cs" />
-    <Compile Include="ObjectXML.cs" />
     <Compile Include="PerformEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,33 +216,17 @@
     <Compile Include="SensePerform.Designer.cs">
       <DependentUpon>SensePerform.cs</DependentUpon>
     </Compile>
-    <Compile Include="SerialList.cs" />
-    <Compile Include="UserControls\ArcMeter.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ArcMeter.Designer.cs">
-      <DependentUpon>ArcMeter.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\ControlButton.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\ControlButton.Designer.cs">
-      <DependentUpon>ControlButton.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\DataNumberDisplayer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\DataNumberDisplayer.Designer.cs">
-      <DependentUpon>DataNumberDisplayer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\PictureButton.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="UserPowerRoleManger.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserControls\PictureButton.Designer.cs">
-      <DependentUpon>PictureButton.cs</DependentUpon>
+    <Compile Include="UserPowerRoleManger.Designer.cs">
+      <DependentUpon>UserPowerRoleManger.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ControlDataBinding.resx">
+      <DependentUpon>ControlDataBinding.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ControlPanelEditor.resx">
       <DependentUpon>ControlPanelEditor.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,15 +267,6 @@
     <EmbeddedResource Include="SensePerform.resx">
       <DependentUpon>SensePerform.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ArcMeter.resx">
-      <DependentUpon>ArcMeter.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\ControlButton.resx">
-      <DependentUpon>ControlButton.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DataNumberDisplayer.resx">
-      <DependentUpon>DataNumberDisplayer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -293,8 +277,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControls\PictureButton.resx">
-      <DependentUpon>PictureButton.cs</DependentUpon>
+    <EmbeddedResource Include="UserPowerRoleManger.resx">
+      <DependentUpon>UserPowerRoleManger.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\EasySmartDataBaseService.Models.DeviceInformationView.datasource" />
@@ -517,6 +501,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\13853.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1192301.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

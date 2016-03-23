@@ -18,6 +18,7 @@ namespace 智能平台总控端
         private Color BOX_COLOR = Color.White;
         private ContainerControl m_container;
         private Control m_control;
+         
         public Control Control
         {
             get
@@ -131,7 +132,7 @@ namespace 智能平台总控端
 
         public void Remove()
         {
-            HideHandles();
+            HideHandles(); 
             m_control.Cursor = oldCursor;
             selected = false;
         }
@@ -145,6 +146,11 @@ namespace 智能平台总控端
                     lbl[i].Visible = true;
                 }
             }
+        }
+
+        public void DisposeControl()
+        {
+            m_control = null;
         }
 
         private void HideHandles()

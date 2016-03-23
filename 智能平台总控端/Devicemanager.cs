@@ -225,14 +225,19 @@ namespace 智能平台总控端
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            int deviceid = 0;
             try
             {
                 DeviceInformationView model = dataGridView1.SelectedRows[0].DataBoundItem as DeviceInformationView;
-                ControlPanelEditor form = new ControlPanelEditor();
-                form.DeviceID = model.DeviceID;
-                form.Show();
+                deviceid = model.DeviceID;
             }
-            catch { }
+            catch 
+            {
+                MessageBox.Show("请正确选择行", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            ControlPanelEditor form = new ControlPanelEditor();
+            form.DeviceID = deviceid;
+            form.Show();
         }
     }
 }

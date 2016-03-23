@@ -51,27 +51,6 @@ namespace 智能平台总控端
             pictureBox1.Width = pictureBox1.Height + 20;
         }
 
-        private void pictureButton2_MouseEnter(object sender, EventArgs e)
-        {
-            (sender as PictureButton).BackColor = Color.LightBlue;
-        }
-
-        private void pictureButton2_MouseLeave(object sender, EventArgs e)
-        {
-            (sender as PictureButton).BackColor = this.BackColor;
-        }
-
-        private void pictureButton2_MouseUp(object sender, MouseEventArgs e)
-        {
-            (sender as PictureButton).BackColor = this.BackColor;
-        }
-
-        private void pictureButton2_MouseDown(object sender, MouseEventArgs e)
-        {
-            (sender as PictureButton).BackColor = Color.LightCoral;
-
-        }
-
         private void pictureButton2_Load(object sender, EventArgs e)
         {
 
@@ -140,6 +119,53 @@ namespace 智能平台总控端
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            Devicemanager DM = new Devicemanager();
+            DM.Show();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            FloorRoom fr = new FloorRoom();
+            fr.ShowDialog();
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pictureBox2_MouseEnter(object sender, EventArgs e)
+        {
+            PictureBox pb = sender as PictureBox;
+            pb.BackColor = Color.LightCyan;
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            PictureBox pb = sender as PictureBox;
+            pb.BackColor = this.BackColor;
+        }
+
+        private void pictureBox2_MouseUp(object sender, MouseEventArgs e)
+        {
+            PictureBox pb = sender as PictureBox;
+            pb.BackColor = Color.LightCyan;
+        }
+
+        private void pictureBox2_MouseDown(object sender, MouseEventArgs e)
+        {
+            PictureBox pb = sender as PictureBox;
+            pb.BackColor = Color.Purple;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            DeviceSeleter ds = new DeviceSeleter();
+            ds.Show();
         }
 
     }
